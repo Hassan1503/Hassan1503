@@ -39,7 +39,7 @@ hassan.say_hi()
 
 ---
 
-## �� Tech Stack & Skills
+## 💻 Tech Stack & Skills
 
 <div align="center">
 
