@@ -1,45 +1,30 @@
 <div align="center">
-  
-# 👋 Hi, I'm Hassan
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&random=false&width=600&lines=PhD+Student+at+Duke+University;Electrical+%26+Computer+Engineering;AI%2FML+Researcher;Multi-Agent+Systems+Enthusiast)](https://git.io/typing-svg)
+# Hassan
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&random=false&width=600&lines=PhD+Candidate+in+Electrical+Engineering;Duke+University;AI%2FML+Research+%7C+Multi-Agent+Systems)](https://git.io/typing-svg)
 
-### 🎓 PhD Student | 🤖 AI/ML Researcher | 💻 Tech Enthusiast
+**PhD Candidate | Electrical and Computer Engineering | Duke University**
 
 </div>
 
 ---
 
-## 🚀 About Me
+## About
 
-```python
-class Hassan:
-    def __init__(self):
-        self.name = "Hassan"
-        self.role = "PhD Student"
-        self.university = "Duke University"
-        self.department = "Electrical and Computer Engineering"
-        self.research_interests = ["Multi-Agentic RAG", "Multimodal LLM", "AI/ML"]
-        self.expertise = ["MATLAB", "Python", "Deep Learning"]
-        self.website = "https://sites.google.com/view/mdhassan"
-    
-    def say_hi(self):
-        print("Thanks for dropping by! Let's collaborate and build something amazing!")
+I am a PhD candidate in Electrical and Computer Engineering at Duke University, specializing in artificial intelligence and machine learning. My research focuses on advanced AI systems, particularly in the domains of Multi-Agentic Retrieval-Augmented Generation (RAG) and Multimodal Large Language Models (LLMs).
 
-hassan = Hassan()
-hassan.say_hi()
-```
+**Research Interests:**
+- Multi-Agent Systems and Retrieval-Augmented Generation
+- Multimodal Large Language Models
+- Deep Learning and Neural Networks
+- Signal Processing and Computational Methods
 
-🔬 **Current Research Focus:**
-- 🌱 Exploring **Multi-Agentic RAG** systems
-- 🤝 Seeking collaboration on **Multimodal LLM** projects
-- 📚 Continuously learning and improving **Python** skills
+**Academic Website:** [https://sites.google.com/view/mdhassan](https://sites.google.com/view/mdhassan)
 
 ---
 
-## 💻 Tech Stack & Skills
+## Technical Expertise
 
 <div align="center">
 
@@ -49,7 +34,7 @@ hassan.say_hi()
 [![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
 [![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://www.r-project.org/)
 
-### AI/ML Frameworks & Tools
+### Machine Learning & AI Frameworks
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
 [![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
@@ -63,7 +48,7 @@ hassan.say_hi()
 [![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
-### Data Science & Visualization
+### Data Science & Computation
 [![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white)](https://matplotlib.org/)
@@ -72,7 +57,7 @@ hassan.say_hi()
 
 ---
 
-## 📊 GitHub Statistics
+## GitHub Activity
 
 <div align="center">
   
@@ -101,66 +86,36 @@ hassan.say_hi()
 
 ---
 
-## 🎯 Current Focus
+## Current Research & Collaboration
 
 <div align="center">
 
-| 🌱 Learning | 💼 Working On | 🤝 Collaborate | 💬 Ask Me About |
+| Research Areas | Active Projects | Collaboration Interests | Expertise |
 |:----------:|:-------------:|:--------------:|:---------------:|
-| Multi-Agentic RAG | PhD Research | Multimodal LLM | MATLAB |
-| Advanced AI/ML | Deep Learning Projects | RAG Systems | Signal Processing |
-| LLM Applications | Research Papers | AI Innovation | Research Methods |
+| Multi-Agentic RAG Systems | PhD Dissertation Research | Multimodal Large Language Models | MATLAB & Signal Processing |
+| Advanced Machine Learning | Deep Learning Applications | Retrieval-Augmented Generation | Research Methodology |
+| LLM Development | Academic Publications | AI System Architecture | Python Development |
 
 </div>
 
 ---
 
-## 🌐 Connect With Me
+## Professional Network
 
 <div align="center">
 
-[![Personal Website](https://img.shields.io/badge/Website-https://sites.google.com/view/mdhassan-00ADD8?style=for-the-badge&logo=google-chrome&logoColor=white)](https://sites.google.com/view/mdhassan)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
-[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hassan@duke.edu)
+[![Personal Website](https://img.shields.io/badge/Academic_Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://sites.google.com/view/mdhassan)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hassan@duke.edu)
 [![Google Scholar](https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com)
 
 </div>
 
 ---
 
-## 💡 Random Dev Quote
-
 <div align="center">
-
-![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
-
-</div>
-
----
-
-## 🎓 Fun Facts
-
-- 🔬 Passionate about bridging theory and practice in AI research
-- 🎯 Always excited to discuss the latest in Multi-Agent Systems and LLMs
-- 🌟 Believe in open-source collaboration and knowledge sharing
-- 📖 Currently exploring the intersection of Retrieval-Augmented Generation and Multi-Agent Systems
-- 🤔 Looking for help and collaboration on advanced Python implementations
-
----
-
-<div align="center">
-
-### 👀 Profile Views
 
 ![Visitor Count](https://profile-counter.glitch.me/Hassan1503/count.svg)
-
-### 💖 Show some love!
-
-If you find my work interesting, consider giving a ⭐ to my repositories!
-
----
-
-**"The best way to predict the future is to invent it."** - Alan Kay
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer&fontSize=0" width="100%"/>
 
