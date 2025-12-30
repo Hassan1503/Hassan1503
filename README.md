@@ -78,12 +78,6 @@ I am a PhD candidate in Electrical and Computer Engineering at Duke University, 
 
 </div>
 
-<div align="center">
-  
-![Snake animation](https://raw.githubusercontent.com/Hassan1503/Hassan1503/output/github-contribution-grid-snake-dark.svg)
-
-</div>
-
 ---
 
 ## Current Research & Collaboration
