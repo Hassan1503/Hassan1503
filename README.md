@@ -131,17 +131,13 @@ Healthcare AI & Digital Health         ·  Neural Network Architectures
 &ensp;
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hassan1503&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" alt="Top Languages" height="165"/>
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Hassan1503&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=FF6B6B&currStreakLabel=C9D1D9)](https://git.io/streak-stats)
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=Hassan1503&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15)](https://github.com/ryo-ma/github-profile-trophy)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=Hassan1503&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=FF6B6B&currStreakLabel=C9D1D9)](https://git.io/streak-stats)
 
 </div>
 
 ---
 
 <div align="center">
-
-![Visitor Count](https://profile-counter.glitch.me/Hassan1503/count.svg)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=100&section=footer&fontSize=0" width="100%"/>
 
