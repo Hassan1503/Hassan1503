@@ -373,6 +373,43 @@ p strong { color: var(--text); }
 }
 .topic-item strong { color: var(--text); display: block; margin-bottom: 4px; }
 
+/* ── Citation metrics ── */
+.metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin: 24px 0 10px;
+}
+.metric {
+  background: linear-gradient(135deg, rgba(108,99,255,0.12) 0%, rgba(0,212,170,0.08) 100%);
+  border: 1px solid rgba(108,99,255,0.25);
+  border-radius: var(--radius);
+  padding: 22px 16px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.metric:hover { border-color: rgba(108,99,255,0.5); box-shadow: var(--shadow); }
+.metric-num {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--accent) 20%, var(--accent2) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.metric-label {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+.metrics-note { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 8px; }
+
 /* ── Publications ── */
 .pub-filters {
   display: flex;
@@ -437,6 +474,22 @@ p strong { color: var(--text); }
   border-radius: 100px;
   font-weight: 600;
 }
+.pub-cites {
+  font-size: 0.78rem;
+  background: rgba(108,99,255,0.12);
+  border: 1px solid rgba(108,99,255,0.35);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+html[data-theme="light"] .pub-cites { color: var(--accent-btn); }
+.pub-cites-na {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+html[data-theme="light"] .pub-cites-na { background: rgba(0,0,0,0.03); }
 .pub-link { font-size: 0.85rem; font-weight: 600; }
 
 /* ── Timeline ── */
