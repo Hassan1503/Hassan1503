@@ -3,12 +3,16 @@
 
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  function isDark() {
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
   // ── Sticky nav background on scroll ──
   var nav = document.getElementById('topnav');
   var backTop = document.getElementById('back-to-top');
   function onScroll() {
     var y = window.scrollY;
-    if (y > 60) {
+    if (y > 40) {
       nav.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');
@@ -41,17 +45,16 @@
     }
   });
 
-  // ── Theme toggle (stored theme is applied by an inline <head> script) ──
+  // ── Theme toggle (light default; stored theme applied by inline head script) ──
   var themeToggle = document.getElementById('theme-toggle');
   function syncThemeToggle() {
-    var light = document.documentElement.getAttribute('data-theme') === 'light';
-    themeToggle.setAttribute('aria-pressed', light ? 'true' : 'false');
-    themeToggle.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+    var dark = isDark();
+    themeToggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    themeToggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
   }
   syncThemeToggle();
   themeToggle.addEventListener('click', function () {
-    var current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-    var next = current === 'light' ? 'dark' : 'light';
+    var next = isDark() ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     try { localStorage.setItem('theme', next); } catch (e) {}
     syncThemeToggle();
@@ -89,12 +92,12 @@
 
   // ── Scroll reveal ──
   var revealTargets = document.querySelectorAll(
-    'section .container > h2, section .container > p, section .container > .highlight-card, ' +
+    'section .container > h2, section .container > p, section .container > .prose, ' +
     'section .container > .card-grid, section .container > .topic-item, ' +
     'section .container > .pub-list, section .container > .pub-filters, ' +
     'section .container > .timeline, section .container > .dates-timeline, ' +
-    'section .container > .skills-grid, section .container > .contact-grid, ' +
-    'section .container > .stat-strip, section .container > .metrics-strip'
+    'section .container > .skills-grid, section .container > .contact-list, ' +
+    'section .container > .metrics-strip'
   );
   revealTargets.forEach(function (el) { el.classList.add('reveal'); });
 
@@ -112,66 +115,8 @@
     revealTargets.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  // ── Hero typing effect ──
-  var subtitle = document.getElementById('typed-subtitle');
-  if (subtitle) {
-    var phrases = [
-      'PhD Candidate · Duke ECE',
-      'Signal Processing & Healthcare AI',
-      'Pediatric CHD Detection from PCG',
-      'Multi-Agent RAG · Multimodal LLMs'
-    ];
-    var pi = 0, ci = 0, deleting = false;
-    function type() {
-      var phrase = phrases[pi];
-      if (!deleting) {
-        ci++;
-        subtitle.textContent = phrase.slice(0, ci);
-        if (ci === phrase.length) {
-          deleting = true;
-          return setTimeout(type, 1800);
-        }
-        return setTimeout(type, 55);
-      }
-      ci--;
-      subtitle.textContent = phrase.slice(0, ci);
-      if (ci === 0) {
-        deleting = false;
-        pi = (pi + 1) % phrases.length;
-        return setTimeout(type, 280);
-      }
-      setTimeout(type, 28);
-    }
-    if (!reducedMotion) {
-      setTimeout(type, 600);
-    }
-  }
-
-  // ── 3D tilt cards (hover-capable pointers only) ──
-  var canTilt = window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedMotion;
-  if (canTilt) {
-    document.querySelectorAll('.tilt').forEach(function (el) {
-      el.addEventListener('pointermove', function (e) {
-        // Fresh rect each move: scrolling or filter reflows move the element
-        var rect = el.getBoundingClientRect();
-        var px = (e.clientX - rect.left) / rect.width;
-        var py = (e.clientY - rect.top) / rect.height;
-        el.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
-        el.style.setProperty('--my', (py * 100).toFixed(1) + '%');
-        el.style.transform =
-          'perspective(800px)' +
-          ' rotateX(' + ((0.5 - py) * 6).toFixed(2) + 'deg)' +
-          ' rotateY(' + ((px - 0.5) * 8).toFixed(2) + 'deg)' +
-          ' translateY(-2px)';
-      });
-      el.addEventListener('pointerleave', function () {
-        el.style.transform = '';
-      });
-    });
-  }
-
-  // ── Animated stat counters ──
-  var statNums = document.querySelectorAll('.stat-num, .metric-num');
+  // ── Animated citation counters ──
+  var statNums = document.querySelectorAll('.metric-num');
   function setInstantly(el) {
     el.textContent = el.getAttribute('data-count');
   }
