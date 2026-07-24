@@ -94,7 +94,7 @@
     'section .container > .pub-list, section .container > .pub-filters, ' +
     'section .container > .timeline, section .container > .dates-timeline, ' +
     'section .container > .skills-grid, section .container > .contact-grid, ' +
-    'section .container > .stat-strip'
+    'section .container > .stat-strip, section .container > .metrics-strip'
   );
   revealTargets.forEach(function (el) { el.classList.add('reveal'); });
 
@@ -171,7 +171,7 @@
   }
 
   // ── Animated stat counters ──
-  var statNums = document.querySelectorAll('.stat-num');
+  var statNums = document.querySelectorAll('.stat-num, .metric-num');
   function setInstantly(el) {
     el.textContent = el.getAttribute('data-count');
   }
