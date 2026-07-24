@@ -1,14 +1,18 @@
 name: Deploy to GitHub Pages
 
+# GitHub Pages for this repo publishes from the gh-pages branch (the
+# workflow token cannot create an Actions-source Pages site, so the
+# artifact-based deploy flow is not usable here). This job keeps
+# gh-pages an exact mirror of main, which triggers the built-in
+# "pages build and deployment" run.
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
@@ -16,21 +20,9 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Mirror main to gh-pages
+        run: git push --force origin HEAD:gh-pages
