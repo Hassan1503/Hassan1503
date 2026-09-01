@@ -297,7 +297,6 @@ p strong { color: var(--ink); font-weight: 600; }
   color: var(--muted);
   margin-top: 6px;
 }
-.metrics-note { font-size: 0.8rem; color: var(--muted); margin-bottom: 6px; }
 
 /* ── Publications ── */
 .pub-filters { display: flex; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
