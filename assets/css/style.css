@@ -743,42 +743,6 @@ footer .footer-mini { font-size: 0.76rem; opacity: 0.75; margin-top: 14px; }
 }
 #back-to-top:hover { background: var(--accent-btn-hover); }
 
-/* ── Stat strip ── */
-.stat-strip {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-  margin: 0 0 28px;
-}
-.stat {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px 16px;
-  text-align: center;
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-}
-.stat:hover { border-color: rgba(108,99,255,0.4); box-shadow: var(--shadow); }
-.stat-num {
-  display: block;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  line-height: 1.1;
-  background: linear-gradient(135deg, var(--accent) 20%, var(--accent2) 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.stat-label {
-  display: block;
-  font-size: 0.76rem;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--text-muted);
-  margin-top: 8px;
-}
-
 /* ── 3D tilt + cursor glare ── */
 .tilt {
   position: relative;
