@@ -31,12 +31,14 @@
   var world = new THREE.Group();
   scene.add(world);
 
+  /* Muted, academic palettes: scholarly blue with restrained teal peaks.
+     The site defaults to light; "dark" is the stored opt-in. */
   var palettes = {
-    dark: { base: 0x6c63ff, peak: 0x00d4aa, hot: 0xff6b6b, star: 0x8892a4, opacity: 0.85, additive: true },
-    light: { base: 0x5a52e0, peak: 0x00a387, hot: 0xe94e4e, star: 0x5a6478, opacity: 0.5, additive: false }
+    dark: { base: 0x93b0ec, peak: 0x6cc9be, hot: 0x93b0ec, star: 0x4a5568, opacity: 0.55, additive: true },
+    light: { base: 0x7b8db0, peak: 0x1e429f, hot: 0x0f766e, star: 0x9aa3b4, opacity: 0.4, additive: false }
   };
   function currentTheme() {
-    return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
   }
 
   /* ── Waveform surface of points ── */
@@ -63,8 +65,8 @@
     size: lite ? 0.06 : 0.05,
     vertexColors: true,
     transparent: true,
-    opacity: palettes.dark.opacity,
-    blending: THREE.AdditiveBlending,
+    opacity: palettes.light.opacity,
+    blending: THREE.NormalBlending,
     depthWrite: false,
     sizeAttenuation: true
   });
@@ -84,9 +86,9 @@
   starsGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
   var starsMaterial = new THREE.PointsMaterial({
     size: 0.035,
-    color: palettes.dark.star,
+    color: palettes.light.star,
     transparent: true,
-    opacity: 0.55,
+    opacity: 0.4,
     depthWrite: false,
     sizeAttenuation: true
   });
