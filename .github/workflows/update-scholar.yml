@@ -34,8 +34,10 @@ jobs:
         run: python3 scripts/fetch_scholar.py
       - name: Commit updated data
         run: |
-          if git diff --quiet -- assets/data/scholar.json && [ -n "$(git ls-files assets/data/scholar.json)" ]; then
-            echo "scholar.json unchanged"
+          # Covers both a new file and a modified one; empty means nothing to do
+          # (unchanged data, or the fetch was refused and wrote nothing).
+          if [ -z "$(git status --porcelain -- assets/data/scholar.json)" ]; then
+            echo "scholar.json unchanged or not written; nothing to commit"
             exit 0
           fi
           git config user.name "github-actions[bot]"
