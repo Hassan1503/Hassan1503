@@ -12,25 +12,52 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
 USER_ID = os.environ.get("SCHOLAR_USER", "q1ppZrsAAAAJ")
 OUT = os.environ.get("SCHOLAR_OUT", "assets/data/scholar.json")
-URL = (
-    "https://scholar.google.com/citations?user=%s&hl=en&view_op=list_works"
-    "&sortby=pubdate&cstart=0&pagesize=100" % USER_ID
-)
-UA = (
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/124.0.0.0 Safari/537.36"
-)
+# Several request shapes are tried in turn; Scholar sometimes refuses one
+# variant from a given network while serving another.
+URLS = [
+    "https://scholar.google.com/citations?user=%s&hl=en&view_op=list_works&sortby=pubdate&cstart=0&pagesize=100" % USER_ID,
+    "https://scholar.google.com/citations?user=%s&hl=en&pagesize=100" % USER_ID,
+    "https://scholar.google.com/citations?hl=en&user=%s" % USER_ID,
+]
+UAS = [
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1",
+]
+BLOCKED = "blocked"
 
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"})
+def fetch_one(url, ua):
+    req = urllib.request.Request(url, headers={
+        "User-Agent": ua,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+    })
     with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.read().decode("utf-8", "replace")
+
+
+def fetch(url=None):
+    """Return the profile HTML, or BLOCKED if every variant is refused.
+    Raises on non-HTTP errors (network down etc.)."""
+    last = None
+    for ua in UAS:
+        for u in ([url] if url else URLS):
+            try:
+                return fetch_one(u, ua)
+            except urllib.error.HTTPError as exc:
+                last = exc
+                if exc.code not in (403, 429, 503):
+                    raise
+                print("  %s -> HTTP %s (%s)" % (u.split("?")[0], exc.code, ua.split(" ")[0]), file=sys.stderr)
+    print("all request variants refused (last: HTTP %s)" % (last.code if last else "?"), file=sys.stderr)
+    return BLOCKED
 
 
 def text(fragment):
@@ -89,17 +116,20 @@ def parse_publications(page):
 
 def main():
     try:
-        page = fetch(URL)
-    except Exception as exc:  # network / HTTP error
+        page = fetch()
+    except Exception as exc:  # network / unexpected HTTP error
         print("fetch failed: %s" % exc, file=sys.stderr)
         return 2
-    if "gs_captcha" in page or "unusual traffic" in page.lower():
-        print("Google Scholar served a CAPTCHA/block page; leaving existing data untouched.", file=sys.stderr)
-        return 3
+    if page == BLOCKED or "gs_captcha" in page or "unusual traffic" in page.lower():
+        # Expected from some networks (Scholar refuses many datacenter IPs).
+        # Not a bug: warn, keep the last good data, exit clean.
+        print("::warning::Google Scholar refused the request (403/CAPTCHA); keeping existing scholar.json.")
+        return 0
     metrics = parse_metrics(page)
     pubs = parse_publications(page)
     if not metrics or not pubs:
-        print("could not parse profile (metrics=%s, pubs=%d)" % (bool(metrics), len(pubs)), file=sys.stderr)
+        print("::error::could not parse profile (metrics=%s, pubs=%d); the page markup may have changed."
+              % (bool(metrics), len(pubs)))
         return 4
 
     data = {
