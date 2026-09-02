@@ -105,9 +105,9 @@ window.SITE = {
   ],
 
   timeline: [
-    { from: '2023', to: 'Present', title: 'PhD Candidate, Electrical & Computer Engineering', org: 'Duke University', loc: 'Durham, NC, USA', current: true,
+    { from: '2025', to: 'Present', title: 'PhD Candidate, Electrical & Computer Engineering', org: 'Duke University', loc: 'Durham, NC, USA', current: true,
       details: ['Advisor: Dr. Rishikesan Kamaleswaran, Associate Professor, Duke University School of Medicine', 'Supported by an ECE departmental fellowship', 'Research: signal processing, deep learning and healthcare AI; CHD detection from phonocardiograms; multi-agent RAG and multimodal LLM systems'] },
-    { from: '2023', to: 'Present', title: 'Graduate Researcher', org: 'Kamaleswaran Lab, Duke University School of Medicine', loc: 'Durham, NC, USA', current: true,
+    { from: '2025', to: 'Present', title: 'Graduate Researcher', org: 'Kamaleswaran Lab, Duke University School of Medicine', loc: 'Durham, NC, USA', current: true,
       details: ['Deep learning models for pediatric CHD screening from heart-sound recordings', 'Collaboration across the medical school and the ECE department on translational AI for global health'] },
     { from: '2021', to: '2022', title: 'MSc, Digital Health', org: 'University of Bristol', loc: 'Bristol, UK', current: false,
       details: ['Awarded the Think Big Postgraduate Scholarship'] }
