@@ -1,0 +1,120 @@
+{
+  "source": "Google Scholar",
+  "profile_url": "https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en",
+  "updated": "2026-09-02",
+  "metrics": {
+    "citations": {
+      "all": 164,
+      "since": 162
+    },
+    "h_index": {
+      "all": 7,
+      "since": 7
+    },
+    "i10_index": {
+      "all": 4,
+      "since": 4
+    },
+    "since_year": 2021
+  },
+  "publications": [
+    {
+      "title": "MMMuLNet: Multimodal Mutual Deep learning Framework for the Pediatric Congenital Heart Disease Detection",
+      "authors": "A Jabbar, M Hassanuzzaman, KI Ahmad, R Mostafa, AH Khandoker, ...",
+      "venue": "IEEE Journal of Biomedical and Health Informatics, 2026",
+      "year": 2026,
+      "cited_by": 0
+    },
+    {
+      "title": "CardioFM: A Multimodal Foundation Model for Joint ECG and PPG Representation Learning",
+      "authors": "M Hassanuzzaman, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal, ...",
+      "venue": "Research Square, rs. 3. rs-9652631, 2026",
+      "year": 2026,
+      "cited_by": 0
+    },
+    {
+      "title": "Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories",
+      "authors": "Y Yang, M Arora, R Zhang, B Abed, J Kim, T Choudhary, ...",
+      "venue": "arXiv preprint arXiv:2605.10840, 2026",
+      "year": 2026,
+      "cited_by": 1
+    },
+    {
+      "title": "MPT: A Comprehensive Toolbox for Deriving Cardiorespiratory Physiomarkers from Biosignals with LLM-Based Interpretation",
+      "authors": "T Choudhary, M Hassanuzzaman, P Krishnan, A Ali, V Moas, ...",
+      "venue": "",
+      "year": 2026,
+      "cited_by": 1
+    },
+    {
+      "title": "Enhancing Healthcare Through AI, AR, and VR: Integrating Human–Computer Interaction for Improved Teleconsultations and Diagnostic Accuracy",
+      "authors": "H Johnson, J Hayward, JV Lawrence, B Bold, B Biswas, W Li, ...",
+      "venue": "Augmented and Virtual Reality in Immersive Healthcare, 275-313, 2025",
+      "year": 2025,
+      "cited_by": 0
+    },
+    {
+      "title": "Automated detection of pediatric congenital heart disease from phonocardiograms using deep and handcrafted feature fusion",
+      "authors": "A Jabbar, E Grooby, YY Poh, KI Ahmad, M Hassanuzzaman, R Mostafa, ...",
+      "venue": "Computers in Biology and Medicine 197, 110993, 2025",
+      "year": 2025,
+      "cited_by": 7
+    },
+    {
+      "title": "Classification of short-segment pediatric heart sounds based on a transformer-based convolutional neural network",
+      "authors": "M Hassanuzzaman, SK Ghosh, MNA Hasan, MA Al Mamun, KI Ahmed, ...",
+      "venue": "IEEE Access 13, 93852-93868, 2025",
+      "year": 2025,
+      "cited_by": 20
+    },
+    {
+      "title": "Congenital Heart Disease Classification Using Phonocardiograms: A Scalable Screening Tool for Diverse Environments",
+      "authors": "FM Abdul Jabbar, Ethan Grooby, Jack Crozier, Alexander Gallon, Vivian Pham ...",
+      "venue": "https://arxiv.org/abs/2503.22773, 2025",
+      "year": 2025,
+      "cited_by": 0
+    },
+    {
+      "title": "Skin cancer machine learning model tone bias",
+      "authors": "J Pope, M Hassanuzzaman, W Chapman, H Day, M Sherpa, O Emara, ...",
+      "venue": "arXiv preprint arXiv:2410.06385, 2024",
+      "year": 2024,
+      "cited_by": 12
+    },
+    {
+      "title": "A deep learning model for recognizing pediatric congenital heart diseases using phonocardiogram signals",
+      "authors": "M Hassanuzzaman, NA Hasan, MA Al Mamun, KI Ahmed, AH Khandoker, ...",
+      "venue": "2023 Computing in Cardiology (CinC) 50, 1-4, 2023",
+      "year": 2023,
+      "cited_by": 3
+    },
+    {
+      "title": "Recognition of pediatric congenital heart diseases by using phonocardiogram signals and transformer-based neural networks",
+      "authors": "M Hassanuzzaman, NA Hasan, MA Al Mamun, M Alkhodari, KI Ahmed, ...",
+      "venue": "2023 45th Annual International Conference of the IEEE Engineering in …, 2023",
+      "year": 2023,
+      "cited_by": 16
+    },
+    {
+      "title": "An efficient surface map creation and tracking using smartphone sensors and crowdsourcing",
+      "authors": "MR Ali Sarker, M Hassanuzzaman, P Biswas, SH Dadon, T Imam, ...",
+      "venue": "Sensors 21 (21), 6969, 2021",
+      "year": 2021,
+      "cited_by": 9
+    },
+    {
+      "title": "Blood glucose level regression for smartphone ppg signals using machine learning",
+      "authors": "TT Islam, MS Ahmed, M Hassanuzzaman, SA Bin Amir, T Rahman",
+      "venue": "Applied Sciences 11 (2), 618, 2021",
+      "year": 2021,
+      "cited_by": 87
+    },
+    {
+      "title": "End to end solution for continuous monitoring and real-time analysis of vital signs from ECG signal",
+      "authors": "M Hassanuzzaman, P Biswas, T Rahman",
+      "venue": "2019 IEEE R10 Humanitarian Technology Conference (R10-HTC)(47129), 55-60, 2019",
+      "year": 2019,
+      "cited_by": 8
+    }
+  ]
+}
