@@ -1,11 +1,11 @@
 {
   "source": "Google Scholar",
   "profile_url": "https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en",
-  "updated": "2026-09-02",
+  "updated": "2026-09-07",
   "metrics": {
     "citations": {
-      "all": 164,
-      "since": 162
+      "all": 165,
+      "since": 163
     },
     "h_index": {
       "all": 7,
@@ -58,7 +58,7 @@
       "authors": "A Jabbar, E Grooby, YY Poh, KI Ahmad, M Hassanuzzaman, R Mostafa, ...",
       "venue": "Computers in Biology and Medicine 197, 110993, 2025",
       "year": 2025,
-      "cited_by": 7
+      "cited_by": 8
     },
     {
       "title": "Classification of short-segment pediatric heart sounds based on a transformer-based convolutional neural network",
