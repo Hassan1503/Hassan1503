@@ -490,6 +490,14 @@ html[data-theme="light"] .pub-cites { color: var(--accent-btn); }
   color: var(--text-muted);
 }
 html[data-theme="light"] .pub-cites-na { background: rgba(0,0,0,0.03); }
+.pub-venue-na {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--border);
+  color: var(--text-muted);
+  font-weight: 500;
+  font-style: italic;
+}
+html[data-theme="light"] .pub-venue-na { background: rgba(0,0,0,0.03); }
 .pub-link { font-size: 0.85rem; font-weight: 600; }
 
 /* ── Timeline ── */
