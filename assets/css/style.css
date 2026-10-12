@@ -498,6 +498,7 @@ html[data-theme="light"] .pub-cites-na { background: rgba(0,0,0,0.03); }
   font-style: italic;
 }
 html[data-theme="light"] .pub-venue-na { background: rgba(0,0,0,0.03); }
+.pub-year-na { opacity: 0.65; font-style: italic; }
 .pub-link { font-size: 0.85rem; font-weight: 600; }
 
 /* ── Timeline ── */
