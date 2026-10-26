@@ -1,23 +1,30 @@
 {
   "source": "Google Scholar",
   "profile_url": "https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en",
-  "updated": "2026-10-12",
+  "updated": "2026-10-26",
   "metrics": {
     "citations": {
-      "all": 180,
-      "since": 178
+      "all": 186,
+      "since": 184
     },
     "h_index": {
       "all": 7,
       "since": 7
     },
     "i10_index": {
-      "all": 5,
-      "since": 5
+      "all": 6,
+      "since": 6
     },
     "since_year": 2021
   },
   "publications": [
+    {
+      "title": "Self-Supervised Representation Learning from Ventilator Waveforms: A Pilot Feasibility Study",
+      "authors": "S Kobara, M Hassanuzzaman, V Krishnamoorthy, T Onuma, ...",
+      "venue": "",
+      "year": 2026,
+      "cited_by": 0
+    },
     {
       "title": "MMMuLNet: Multimodal Mutual Deep learning Framework for the Pediatric Congenital Heart Disease Detection",
       "authors": "A Jabbar, M Hassanuzzaman, KI Ahmad, R Mostafa, AH Khandoker, ...",
@@ -26,11 +33,11 @@
       "cited_by": 0
     },
     {
-      "title": "CardioFM: A Multimodal Foundation Model for Joint ECG and PPG Representation Learning",
+      "title": "CardioFM: A multimodal foundation model for joint ECG and PPG representation learning",
       "authors": "M Hassanuzzaman, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal, ...",
       "venue": "Research Square, rs. 3. rs-9652631, 2026",
       "year": 2026,
-      "cited_by": 1
+      "cited_by": 2
     },
     {
       "title": "Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories",
@@ -65,7 +72,7 @@
       "authors": "M Hassanuzzaman, SK Ghosh, MNA Hasan, MA Al Mamun, KI Ahmed, ...",
       "venue": "IEEE Access 13, 93852-93868, 2025",
       "year": 2025,
-      "cited_by": 22
+      "cited_by": 23
     },
     {
       "title": "Congenital Heart Disease Classification Using Phonocardiograms: A Scalable Screening Tool for Diverse Environments",
@@ -93,21 +100,21 @@
       "authors": "M Hassanuzzaman, NA Hasan, MA Al Mamun, M Alkhodari, KI Ahmed, ...",
       "venue": "2023 45th Annual International Conference of the IEEE Engineering in …, 2023",
       "year": 2023,
-      "cited_by": 18
+      "cited_by": 19
     },
     {
       "title": "An efficient surface map creation and tracking using smartphone sensors and crowdsourcing",
       "authors": "MR Ali Sarker, M Hassanuzzaman, P Biswas, SH Dadon, T Imam, ...",
       "venue": "Sensors 21 (21), 6969, 2021",
       "year": 2021,
-      "cited_by": 9
+      "cited_by": 11
     },
     {
       "title": "Blood glucose level regression for smartphone ppg signals using machine learning",
       "authors": "TT Islam, MS Ahmed, M Hassanuzzaman, SA Bin Amir, T Rahman",
       "venue": "Applied Sciences 11 (2), 618, 2021",
       "year": 2021,
-      "cited_by": 88
+      "cited_by": 89
     },
     {
       "title": "End to end solution for continuous monitoring and real-time analysis of vital signs from ECG signal",
