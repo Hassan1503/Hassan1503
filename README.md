@@ -17,14 +17,6 @@ I am advised by [Dr. Rishikesan Kamaleswaran](https://scholars.duke.edu/person/r
 and supported by an ECE Departmental Fellowship. Before Duke I read for an MSc in Digital Health at
 the University of Bristol on a Think Big Postgraduate Scholarship.
 
-<!-- SCHOLAR:START -->
-| Citations | h-index | i10-index | Publications |
-|:---------:|:-------:|:---------:|:------------:|
-| **188** | **7** | **6** | **16** |
-
-<sub>Google Scholar, 2026-10-31. Refreshed daily by a scheduled workflow in this repository.</sub>
-<!-- SCHOLAR:END -->
-
 ## Research
 
 Six threads run through my work. They share a question: what does it take for a model trained on
