@@ -163,7 +163,7 @@
   });
 
   /* ── Google Scholar overlay ────────────────────────────────
-     assets/data/scholar.json is refreshed weekly by a GitHub Action.
+     assets/data/scholar.json is refreshed daily by a GitHub Action.
      When present it supersedes the numbers written into the HTML. */
   function norm(s) {
     return String(s || '').toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();

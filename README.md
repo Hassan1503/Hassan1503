@@ -27,7 +27,7 @@ the University of Bristol on a Think Big Postgraduate Scholarship.
 |:---------:|:-------:|:---------:|:------------:|
 | **188** | **7** | **6** | **16** |
 
-<sub>Google Scholar, 2026-10-31. Refreshed weekly by a scheduled workflow in this repository.</sub>
+<sub>Google Scholar, 2026-10-31. Refreshed daily by a scheduled workflow in this repository.</sub>
 <!-- SCHOLAR:END -->
 
 ## Research
@@ -103,5 +103,5 @@ screening in low-resource settings — and from students considering this area. 
 [LinkedIn](https://www.linkedin.com/in/md-hassanuzzaman-b31218b0/).
 
 <sub>This profile and the [accompanying site](https://hassan1503.github.io/Hassan1503/) are built
-from this repository. The figure above is synthesised from the same signal model that drives Figure 1
-on the site; the code is in <code>scripts/build_banner.py</code>.</sub>
+from this repository. The figure above is a synthesised phonocardiogram; the code that draws it is in
+<code>scripts/build_banner.py</code>.</sub>

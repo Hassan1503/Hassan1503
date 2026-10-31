@@ -6,7 +6,7 @@ name: Deploy to GitHub Pages
 # gh-pages an exact mirror of main, which triggers the built-in
 # "pages build and deployment" run.
 
-# A push made with GITHUB_TOKEN does not start workflows, so the weekly
+# A push made with GITHUB_TOKEN does not start workflows, so the daily
 # Scholar commit on main never reached the published site through `push`
 # alone. workflow_run does fire for it, so the refresh now deploys itself.
 on:

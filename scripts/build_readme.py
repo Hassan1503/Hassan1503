@@ -6,7 +6,7 @@ builds its publication section from — so authorship, venues and citation count
 cannot drift between the profile and the site.
 
 The citation-metric table in the same file is handled separately, by
-scripts/sync_metrics.py, which the weekly Scholar workflow runs.
+scripts/sync_metrics.py, which the daily Scholar workflow runs.
 
 Run after editing the publication data:  python3 scripts/build_readme.py
 """

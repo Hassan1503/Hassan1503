@@ -1,12 +1,17 @@
 name: Update Google Scholar metrics
 
 # Refreshes assets/data/scholar.json from the public Google Scholar profile.
-# Runs weekly, on demand, and whenever the fetch script or this workflow
+# Runs daily, on demand, and whenever the fetch script or this workflow
 # changes on any branch (so a PR can validate real data before merging).
+#
+# Daily rather than weekly because Google refuses roughly half the requests
+# that come from datacenter IPs. A blocked run keeps the last good data and
+# exits clean, so seven attempts a week turn an unreliable fetch into numbers
+# that are almost never more than a day or two behind.
 
 on:
   schedule:
-    - cron: "17 6 * * 1"
+    - cron: "17 6 * * *"
   workflow_dispatch:
   push:
     paths:
@@ -35,7 +40,7 @@ jobs:
       - name: Fetch metrics from Google Scholar
         run: python3 scripts/fetch_scholar.py
       # Per-paper counts first, then regenerate everything built from them —
-      # otherwise the four headline metrics move each week while the individual
+      # otherwise the four headline metrics move each day while the individual
       # citation counts beneath them stay frozen.
       - name: Carry per-paper citation counts into the curated list
         run: python3 scripts/refresh_citations.py
