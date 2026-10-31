@@ -1,11 +1,11 @@
 {
   "source": "Google Scholar",
   "profile_url": "https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en",
-  "updated": "2026-10-26",
+  "updated": "2026-10-31",
   "metrics": {
     "citations": {
-      "all": 186,
-      "since": 184
+      "all": 188,
+      "since": 186
     },
     "h_index": {
       "all": 7,
@@ -37,7 +37,7 @@
       "authors": "M Hassanuzzaman, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal, ...",
       "venue": "Research Square, rs. 3. rs-9652631, 2026",
       "year": 2026,
-      "cited_by": 2
+      "cited_by": 3
     },
     {
       "title": "Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories",
@@ -114,7 +114,7 @@
       "authors": "TT Islam, MS Ahmed, M Hassanuzzaman, SA Bin Amir, T Rahman",
       "venue": "Applied Sciences 11 (2), 618, 2021",
       "year": 2021,
-      "cited_by": 89
+      "cited_by": 90
     },
     {
       "title": "End to end solution for continuous monitoring and real-time analysis of vital signs from ECG signal",

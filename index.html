@@ -1,462 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md Hassanuzzaman &mdash; PhD Candidate, Duke ECE</title>
-  <meta name="description" content="Md Hassanuzzaman is a PhD candidate in Electrical and Computer Engineering at Duke University. Research at the intersection of signal processing, deep learning, and healthcare AI." />
-  <meta name="author" content="Md Hassanuzzaman" />
-
-  <meta property="og:title" content="Md Hassanuzzaman &mdash; PhD Candidate, Duke ECE" />
-  <meta property="og:description" content="Signal processing, deep learning, and healthcare AI. Pediatric CHD detection from phonocardiograms, multi-agent RAG, and multimodal LLMs." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://hassan1503.github.io/Hassan1503/" />
-  <meta property="og:image" content="https://hassan1503.github.io/Hassan1503/assets/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://hassan1503.github.io/Hassan1503/" />
-
-  <script>
-    /* Apply the persisted theme before first paint to avoid a theme flash. */
-    try {
-      var t = localStorage.getItem('theme');
-      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
-    } catch (e) {}
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236c63ff'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Space Grotesk,sans-serif' font-size='52' font-weight='700' fill='white'%3EMH%3C/text%3E%3C/svg%3E">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md Hassanuzzaman — PhD Candidate, Duke University</title>
+<meta name="description" content="Md Hassanuzzaman is a PhD candidate in Electrical and Computer Engineering at Duke University, working in the Kamaleswaran Lab on machine learning for physiological signals: congenital heart disease screening from heart sounds, and multimodal foundation models for clinical data.">
+<meta name="author" content="Md Hassanuzzaman">
+<link rel="canonical" href="https://hassan1503.github.io/Hassan1503/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Md Hassanuzzaman — PhD Candidate, Duke University">
+<meta property="og:description" content="Machine learning for physiological signals: congenital heart disease screening from heart sounds, and multimodal foundation models for clinical data.">
+<meta property="og:url" content="https://hassan1503.github.io/Hassan1503/">
+<meta property="og:image" content="https://hassan1503.github.io/Hassan1503/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Md Hassanuzzaman, PhD Candidate, Duke University — machine learning for physiological signals, over a phonocardiogram trace.">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+  /* Runs before first paint. Marks that scripting is available — CSS scopes the
+     reveal animation to .js so the page is readable without it — then applies a
+     stored theme, falling back to the operating system's preference. */
+  (function (h) {
+    h.className += ' js';
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t !== 'dark' && t !== 'light') {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    h.setAttribute('data-theme', t);
+  })(document.documentElement);
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23012169'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='54' fill='%23fff'%3EMH%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Md Hassanuzzaman",
+"jobTitle":"PhD Candidate, Electrical and Computer Engineering",
+"affiliation":{"@type":"CollegeOrUniversity","name":"Duke University"},
+"url":"https://hassan1503.github.io/Hassan1503/",
+"sameAs":["https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en",
+"https://scholars.duke.edu/person/Md.Hassanuzzaman",
+"https://www.researchgate.net/profile/Md-Hassanuzzaman",
+"https://www.linkedin.com/in/md-hassanuzzaman-b31218b0/",
+"https://github.com/Hassan1503"],
+"knowsAbout":["Biomedical signal processing","Phonocardiography","Congenital heart disease","Machine learning for health","Multimodal foundation models"]}
+</script>
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- ═══════════════════════════════════════════ NAV ═══ -->
-<nav id="topnav">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo">Md<span>Hassanuzzaman</span></a>
-    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-list">
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="wordmark" href="#top">Md Hassanuzzaman</a>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-    <ul id="nav-list">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="theme-toggle" aria-label="Switch to light theme" aria-pressed="false" title="Toggle theme">
-      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    <nav id="nav" class="nav" aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Dark theme" title="Dark theme">
+      <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
     </button>
   </div>
-</nav>
+</header>
 
-<main id="main">
-<!-- ═══════════════════════════════════════════ HERO (3D) ═══ -->
-<section id="hero">
-  <canvas id="hero-canvas" aria-hidden="true"></canvas>
-  <div class="grid-bg"></div>
-  <div class="hero-inner">
-    <div class="badge"><span aria-hidden="true">&#127979;</span> Duke University &middot; ECE</div>
-    <h1>Md Hassanuzzaman</h1>
-    <p class="hero-subtitle" id="typed-subtitle">PhD Candidate &middot; Signal Processing &amp; Healthcare AI</p>
-    <p class="tagline">
-      Building scalable computational methods at the intersection of
-      <strong>signal processing</strong>, <strong>deep learning</strong>, and
-      <strong>healthcare AI</strong> &mdash; with a focus on automated diagnosis of
-      congenital heart disease from phonocardiogram signals.
-    </p>
-    <div class="hero-meta">
-      <div class="chip"><span class="icon" aria-hidden="true">&#128218;</span> Kamaleswaran Lab</div>
-      <div class="chip"><span class="icon" aria-hidden="true">&#127891;</span> ECE Departmental Fellowship</div>
-      <div class="chip"><span class="icon" aria-hidden="true">&#127919;</span> CHD Detection &middot; PCG &middot; LLMs</div>
-    </div>
-    <div class="cta-group">
-      <a href="#publications" class="btn btn-primary"><span aria-hidden="true">&#128218;</span> View Publications</a>
-      <a href="#contact" class="btn btn-outline"><span aria-hidden="true">&#9993;&#65039;</span> Get in touch</a>
-      <a href="https://scholar.google.com/citations?user=q1ppZrsAAAAJ&amp;hl=en" target="_blank" rel="noopener" class="btn btn-outline"><span aria-hidden="true">&#127891;</span> Google Scholar</a>
-    </div>
-    <p class="hero-hint" id="hero-hint" hidden>The waveform behind this page is a live 3D heart-sound signal &mdash; move your cursor to explore it.</p>
-  </div>
-  <a href="#about" class="scroll-cue" aria-label="Scroll to about">
-    <span></span>
-  </a>
-</section>
+<div class="shell">
 
-<!-- ═══════════════════════════════════════════ ABOUT ═══ -->
-<section id="about">
-  <div class="container">
-    <p class="section-label">About Me</p>
-    <h2>Hello &mdash; I am Hassan.</h2>
-    <div class="highlight-card">
-      <p>I am a PhD candidate in the <a href="https://ece.duke.edu/" target="_blank" rel="noopener">Department of Electrical and Computer Engineering</a> at <a href="https://duke.edu/" target="_blank" rel="noopener">Duke University</a>, supported by an ECE departmental fellowship. I conduct research at the <a href="https://www.kamaleswaran.com/" target="_blank" rel="noopener">Kamaleswaran Lab</a> under the supervision of <a href="https://scholars.duke.edu/person/rishikesan.kamaleswaran" target="_blank" rel="noopener">Dr. Rishikesan Kamaleswaran</a>, Associate Professor at Duke University School of Medicine.</p>
-    </div>
-    <div class="card-grid card-grid-2">
-      <div class="card tilt">
-        <h3>What I work on</h3>
-        <p>My research lies at the intersection of <strong>signal processing</strong>, <strong>deep learning</strong>, and <strong>healthcare AI</strong>, with a primary focus on developing scalable computational methods for the <strong>automated diagnosis of congenital heart diseases (CHD)</strong> using phonocardiogram (PCG) signals. I also work on <strong>multi-agent retrieval-augmented generation (RAG)</strong> systems and <strong>multimodal large language models (LLMs)</strong>.</p>
-      </div>
-      <div class="card tilt">
-        <h3>Before Duke</h3>
-        <p>Prior to Duke, I completed my MSc in Digital Health at the <a href="https://www.bristol.ac.uk/" target="_blank" rel="noopener">University of Bristol</a>, UK, where I was awarded the prestigious <strong>Think Big Postgraduate Scholarship</strong>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ RESEARCH ═══ -->
-<section id="research">
-  <div class="container">
-    <p class="section-label">Research Areas</p>
-    <h2>What I Work On</h2>
-    <p>I am broadly interested in computational methods that turn noisy biomedical signals and unstructured clinical data into reliable, scalable diagnostics. Current threads include:</p>
-    <div class="topic-item">
-      <div class="topic-dot"></div>
-      <div><strong>Pediatric CHD Detection from Phonocardiograms</strong> Designing deep neural architectures (1D-CNNs, transformers) for automated screening of congenital heart disease from short-segment heart sounds across diverse, low-resource environments.</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-dot" style="background:var(--accent2)"></div>
-      <div><strong>Biomedical Signal Processing</strong> Robust feature extraction, denoising, and segmentation pipelines for PCG, ECG, and other physiological time-series, including handcrafted-vs-learned feature fusion.</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-dot" style="background:var(--accent3)"></div>
-      <div><strong>Multi-Agent RAG Systems</strong> Designing collaborating LLM agents that retrieve, reason over, and synthesize evidence from heterogeneous medical and scientific corpora.</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-dot"></div>
-      <div><strong>Multimodal Large Language Models</strong> Joint reasoning over text, signals, and images for clinical narrative generation, decision support, and patient-facing applications.</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-dot" style="background:var(--accent2)"></div>
-      <div><strong>Deep Learning for Biomedical Applications</strong> Transformer- and residual-based architectures for time-series classification with an emphasis on generalization, calibration, and deployment to resource-constrained settings.</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-dot" style="background:var(--accent3)"></div>
-      <div><strong>Healthcare AI &amp; Digital Health</strong> Translating models into clinically usable tools, with attention to fairness, robustness, and the realities of bedside data.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ PUBLICATIONS ═══ -->
-<section id="publications">
-  <div class="container">
-    <p class="section-label">Selected Work</p>
-    <h2>Publications</h2>
-    <p>A selection of recent peer-reviewed and preprint contributions. <a href="https://scholar.google.com/citations?user=q1ppZrsAAAAJ&amp;hl=en" target="_blank" rel="noopener">View the full list on Google Scholar &rarr;</a></p>
-
-    <div class="metrics-strip" aria-label="Citation metrics">
-      <div class="metric tilt">
-        <span class="metric-num" data-count="31">0</span>
-        <span class="metric-label">Total Citations</span>
-      </div>
-      <div class="metric tilt">
-        <span class="metric-num" data-count="3">0</span>
-        <span class="metric-label">h-index</span>
-      </div>
-      <div class="metric tilt">
-        <span class="metric-num" data-count="2">0</span>
-        <span class="metric-label">i10-index</span>
-      </div>
-      <div class="metric tilt">
-        <span class="metric-num" data-count="6">0</span>
-        <span class="metric-label">Publications</span>
-      </div>
-    </div>
-    <p class="metrics-note" id="metrics-source" hidden></p>
-
-    <div class="pub-filters" role="group" aria-label="Filter publications by year">
-      <button class="pub-tab active" data-filter="all" aria-pressed="true">All</button>
-      <button class="pub-tab" data-filter="2025" aria-pressed="false">2025</button>
-      <button class="pub-tab" data-filter="2024" aria-pressed="false">2024</button>
-      <button class="pub-tab" data-filter="2023" aria-pressed="false">2023</button>
-    </div>
-
-    <ol class="pub-list">
-      <li class="pub-item tilt" data-year="2025">
-        <span class="pub-year">2025</span>
-        <div class="pub-body">
-          <h3 class="pub-title">Congenital Heart Disease Classification Using Phonocardiograms: A Scalable Screening Tool for Diverse Environments</h3>
-          <p class="pub-authors">A. Jabbar, E. Grooby, <strong>M. Hassanuzzaman</strong>, et al.</p>
-          <div class="pub-meta">
-            <span class="pub-venue">arXiv</span>
-            <span class="pub-cites"><span aria-hidden="true">&#128220;</span> Cited by 1</span>
-            <a href="https://arxiv.org/abs/2503.22773" target="_blank" rel="noopener" class="pub-link">Preprint &rarr;</a>
-          </div>
-        </div>
-      </li>
-      <li class="pub-item tilt" data-year="2025">
-        <span class="pub-year">2025</span>
-        <div class="pub-body">
-          <h3 class="pub-title">Automated Detection of Pediatric Congenital Heart Disease from Phonocardiograms Using Deep and Handcrafted Feature Fusion</h3>
-          <p class="pub-authors">A. Jabbar, E. Grooby, <strong>M. Hassanuzzaman</strong>, et al.</p>
-          <div class="pub-meta">
-            <span class="pub-venue">Computers in Biology and Medicine</span>
-            <span class="pub-cites"><span aria-hidden="true">&#128220;</span> Cited by 3</span>
-            <a href="https://dukespace.lib.duke.edu/server/api/core/bitstreams/d5afd6a1-4f6f-4ca8-ae68-c888842b0faf/content" target="_blank" rel="noopener" class="pub-link">PDF &rarr;</a>
-          </div>
-        </div>
-      </li>
-      <li class="pub-item tilt" data-year="2025">
-        <span class="pub-year">2025</span>
-        <div class="pub-body">
-          <h3 class="pub-title">Classification of Short-Segment Pediatric Heart Sounds for Detection of Congenital Heart Disease</h3>
-          <p class="pub-authors"><strong>M. Hassanuzzaman</strong>, et al.</p>
-          <div class="pub-meta">
-            <span class="pub-venue">IEEE Access</span>
-            <span class="pub-cites"><span aria-hidden="true">&#128220;</span> Cited by 13</span>
-          </div>
-        </div>
-      </li>
-      <li class="pub-item tilt" data-year="2024">
-        <span class="pub-year">2024</span>
-        <div class="pub-body">
-          <h3 class="pub-title">Enhancing Healthcare Through AI, AR, and VR &mdash; Book Chapter</h3>
-          <p class="pub-authors"><strong>M. Hassanuzzaman</strong>, et al.</p>
-          <div class="pub-meta">
-            <span class="pub-venue">Wiley</span>
-            <span class="pub-cites pub-cites-na">Book chapter</span>
-            <a href="https://onlinelibrary.wiley.com/doi/10.1002/9781394302864.ch10" target="_blank" rel="noopener" class="pub-link">Chapter &rarr;</a>
-          </div>
-        </div>
-      </li>
-      <li class="pub-item tilt" data-year="2023">
-        <span class="pub-year">2023</span>
-        <div class="pub-body">
-          <h3 class="pub-title">Recognition of Pediatric Congenital Heart Diseases Using Transformer-Based Neural Networks</h3>
-          <p class="pub-authors"><strong>M. Hassanuzzaman</strong>, et al. &mdash; <em>93% accuracy, 97% sensitivity</em></p>
-          <div class="pub-meta">
-            <span class="pub-venue">IEEE EMBC</span>
-            <span class="pub-cites"><span aria-hidden="true">&#128220;</span> Cited by 12</span>
-          </div>
-        </div>
-      </li>
-      <li class="pub-item tilt" data-year="2023">
-        <span class="pub-year">2023</span>
-        <div class="pub-body">
-          <h3 class="pub-title">A Deep Learning Model for Recognizing Pediatric CHD from PCG Signals</h3>
-          <p class="pub-authors"><strong>M. Hassanuzzaman</strong>, et al. &mdash; <em>1D-CNN with residual blocks</em></p>
-          <div class="pub-meta">
-            <span class="pub-venue">Computing in Cardiology (CinC)</span>
-            <span class="pub-cites"><span aria-hidden="true">&#128220;</span> Cited by 2</span>
-          </div>
-        </div>
-      </li>
+  <aside class="rail" data-spy aria-label="On this page">
+    <p class="rail-h">Contents</p>
+    <ol>
+      <li><a href="#research"><span class="rail-n">01</span> Research</a></li>
+      <li><a href="#publications"><span class="rail-n">02</span> Publications</a></li>
+      <li><a href="#experience"><span class="rail-n">03</span> Experience</a></li>
+      <li><a href="#education"><span class="rail-n">04</span> Education</a></li>
+      <li><a href="#recognition"><span class="rail-n">05</span> Recognition</a></li>
+      <li><a href="#contact"><span class="rail-n">06</span> Contact</a></li>
     </ol>
-  </div>
-</section>
+  </aside>
 
-<!-- ═══════════════════════════════════════════ EXPERIENCE ═══ -->
-<section id="experience">
-  <div class="container">
-    <p class="section-label">Affiliations &amp; Roles</p>
-    <h2>Experience</h2>
-    <ul class="timeline">
-      <li class="timeline-item current">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content tilt">
-          <div class="timeline-meta">
-            <span class="timeline-date">2023 &mdash; Present</span>
-            <span class="timeline-loc">Durham, NC, USA</span>
+  <main id="main">
+
+    <!-- ══ Masthead ══ -->
+    <section id="top" class="masthead">
+      <p class="eyebrow">Duke University · Electrical &amp; Computer Engineering</p>
+      <h1>Md Hassanuzzaman</h1>
+      <p class="role">PhD Candidate · Machine learning for physiological signals</p>
+
+      <p class="lede">I build methods that turn raw physiological recordings into reliable clinical
+      decisions. My thesis develops automated screening for <strong>congenital heart disease</strong> from
+      heart sounds, designed to hold up on inexpensive stethoscopes in settings where
+      echocardiography is out of reach. Alongside it I work on <strong>multimodal foundation
+      models</strong> that learn shared representations across ECG, PPG and other clinical signals.</p>
+
+      <dl class="vitals">
+        <div><dt>Advisor</dt><dd><a href="https://scholars.duke.edu/person/rishikesan.kamaleswaran" target="_blank" rel="noopener">Dr. Rishikesan Kamaleswaran</a></dd></div>
+        <div><dt>Lab</dt><dd><a href="https://www.kamaleswaran.com/" target="_blank" rel="noopener">Kamaleswaran Lab</a>, Duke School of Medicine</dd></div>
+        <div><dt>Support</dt><dd>ECE Departmental Fellowship</dd></div>
+        <div><dt>Location</dt><dd>Durham, North Carolina</dd></div>
+      </dl>
+
+      <nav class="profiles" aria-label="Profiles">
+        <a href="https://scholar.google.com/citations?user=q1ppZrsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google&nbsp;Scholar</a>
+        <a href="https://scholars.duke.edu/person/Md.Hassanuzzaman" target="_blank" rel="noopener">Scholars@Duke</a>
+        <a href="https://www.researchgate.net/profile/Md-Hassanuzzaman" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://github.com/Hassan1503" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/md-hassanuzzaman-b31218b0/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </section>
+
+    <!-- ══ Figure 1 ══ -->
+    <figure class="fig">
+      <div class="fig-frame">
+        <canvas id="pcg" role="img" aria-label="A synthetic paediatric phonocardiogram trace showing the first and second heart sounds of each cardiac cycle, with an optional systolic murmur."><img class="fig-fallback" src="assets/img/pcg-banner-light.svg" alt="A phonocardiogram: normal cardiac cycles, each with a first and second heart sound, followed by cycles in which a systolic murmur fills the silence between them."></canvas>
+      </div>
+      <div class="fig-ctl">
+        <button id="pcg-play" type="button" class="btn-s">Play</button>
+        <label class="chk"><input type="checkbox" id="pcg-murmur"> Add systolic murmur</label>
+        <span class="fig-state" id="pcg-label">Normal heart sounds — S1 and S2, silent systole</span>
+      </div>
+      <figcaption>
+        <b>Figure 1.</b> A phonocardiogram — the signal at the centre of this work. Each cycle
+        carries two sounds: <b>S1</b> as the mitral and tricuspid valves close, <b>S2</b> as the aortic and
+        pulmonary valves close. A septal defect fills the silence between them with turbulent flow.
+        Distinguishing that murmur from a benign one, on noisy recordings from a low-cost
+        stethoscope, is the problem my models are trained to solve.
+      </figcaption>
+    </figure>
+
+    <!-- ══ Metrics ══ -->
+    <section class="metrics" aria-label="Citation metrics">
+      <div class="metric" data-metric-card><span class="metric-n" data-metric="citations">188</span><span class="metric-l">Citations</span></div>
+      <div class="metric" data-metric-card><span class="metric-n" data-metric="h_index">7</span><span class="metric-l">h-index</span></div>
+      <div class="metric" data-metric-card><span class="metric-n" data-metric="i10_index">6</span><span class="metric-l">i10-index</span></div>
+      <div class="metric" data-metric-card><span class="metric-n" data-metric="publications">16</span><span class="metric-l">Publications</span></div>
+      <p class="metric-src">Google Scholar<span id="scholar-note" hidden>, updated <span id="scholar-stamp"></span></span>. Refreshed weekly.</p>
+    </section>
+
+    <!-- ══ 01 Research ══ -->
+    <section id="research" class="sec reveal">
+      <header class="sec-h"><span class="sec-n">01</span><h2>Research</h2></header>
+      <p class="sec-lede">Six threads run through my work. They share a question: what does it take
+      for a model trained on physiological signals to remain trustworthy outside the dataset it
+      was fitted on?</p>
+
+      <ol class="themes">
+        <li>
+          <h3>Congenital heart disease screening from heart sounds</h3>
+          <p>The core of my thesis. Convolutional and attention-based models that detect structural
+          heart defects in children directly from phonocardiograms, validated on a cohort of 751
+          paediatric subjects recorded at four auscultation sites.</p>
+          <p class="theme-k">phonocardiography · 1D-CNN · attention transformers · paediatric cardiology</p>
+        </li>
+        <li>
+          <h3>Multimodal foundation models for physiological data</h3>
+          <p>Representations learned jointly across modalities rather than one signal at a time.
+          CardioFM pretrains over ECG and PPG together; Clin-JEPA extends joint-embedding predictive
+          pretraining to electronic health record trajectories.</p>
+          <p class="theme-k">self-supervised learning · JEPA · ECG · PPG · representation learning</p>
+        </li>
+        <li>
+          <h3>How little signal is enough</h3>
+          <p>Deployment is bounded by recording quality and length, not by architecture. I study
+          signal-quality criteria and minimum segment duration — establishing that five seconds of
+          adequately clean audio supports reliable classification, where three does not.</p>
+          <p class="theme-k">signal quality · RMSSD · zero-crossing rate · short-segment inference</p>
+        </li>
+        <li>
+          <h3>Screening where echocardiography is unavailable</h3>
+          <p>Echocardiography is the diagnostic standard and is inaccessible to much of the world.
+          I work on models that survive the conditions that actually obtain in low-resource
+          screening: a single auscultation site, ambient noise, and recordings a cardiologist
+          would call non-diagnostic.</p>
+          <p class="theme-k">global health · digital stethoscope · low-resource deployment</p>
+        </li>
+        <li>
+          <h3>Physiomarker extraction and interpretation</h3>
+          <p>Tooling that derives cardiorespiratory physiomarkers from raw biosignals reproducibly,
+          and pairs them with language-model interpretation so that clinicians can interrogate what
+          a measurement means rather than accept a number.</p>
+          <p class="theme-k">physiomarkers · reproducible pipelines · LLM interpretation</p>
+        </li>
+        <li>
+          <h3>Fairness and transfer across sites</h3>
+          <p>A model that works in one hospital on one population is not yet a clinical tool. This
+          thread examines demographic bias in medical imaging models and whether learned
+          representations transfer across institutions without added capacity.</p>
+          <p class="theme-k">algorithmic fairness · domain shift · cross-site generalisation</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ══ 02 Publications ══ -->
+    <section id="publications" class="sec reveal">
+      <header class="sec-h"><span class="sec-n">02</span><h2>Publications</h2></header>
+      <p class="sec-lede">Reverse chronological. Citation counts are drawn from Google Scholar and
+      refresh weekly. <a href="https://scholar.google.com/citations?user=q1ppZrsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Full list on Google Scholar&nbsp;↗</a></p>
+
+      <div class="filters">
+        <div class="fgroup" role="group" aria-label="Filter by topic">
+          <span class="fgroup-l">Topic</span>
+          <button type="button" data-filter="topic" data-value="all" class="is-on" aria-pressed="true">All</button>
+          <button type="button" data-filter="topic" data-value="chd" aria-pressed="false">Heart sounds</button>
+          <button type="button" data-filter="topic" data-value="foundation-models" aria-pressed="false">Foundation models</button>
+          <button type="button" data-filter="topic" data-value="ssl" aria-pressed="false">Self-supervised</button>
+          <button type="button" data-filter="topic" data-value="global-health" aria-pressed="false">Global health</button>
+          <button type="button" data-filter="topic" data-value="sensing" aria-pressed="false">Wearable sensing</button>
+        </div>
+        <div class="fgroup" role="group" aria-label="Filter by type">
+          <span class="fgroup-l">Type</span>
+          <button type="button" data-filter="kind" data-value="all" class="is-on" aria-pressed="true">All</button>
+          <button type="button" data-filter="kind" data-value="journal" aria-pressed="false">Journal</button>
+          <button type="button" data-filter="kind" data-value="conference" aria-pressed="false">Conference</button>
+          <button type="button" data-filter="kind" data-value="preprint" aria-pressed="false">Preprint</button>
+          <button type="button" data-filter="kind" data-value="chapter" aria-pressed="false">Chapter</button>
+        </div>
+        <p class="fcount" id="pub-count" aria-live="polite">16 publications</p>
+      </div>
+
+      <ol class="pubs" id="pubs">
+      <!-- PUBS:START -->
+        <li class="pub" data-kind="preprint" data-topics="foundation-models ssl ehr" data-title="Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories">
+          <p class="pub-year">2026</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories</h3>
+            <p class="pub-authors">Y Yang, M Arora, R Zhang, B Abed, J Kim, T Choudhary, ...</p>
+            <p class="pub-venue">arXiv:2605.10840</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Preprint</span>
+              <span class="tag tag-c" data-cites>3 citations</span>
+              <a class="pub-link" href="https://arxiv.org/abs/2605.10840" target="_blank" rel="noopener">arXiv&nbsp;↗</a>
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@misc{yang2026clinjepa,
+  author        = {Y Yang and M Arora and R Zhang and B Abed and J Kim and T Choudhary and others},
+  title         = {{Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories}},
+  eprint        = {2605.10840},
+  archivePrefix = {arXiv},
+  year          = {2026},
+  url           = {https://arxiv.org/abs/2605.10840}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
           </div>
-          <h3>Graduate Researcher</h3>
-          <p class="timeline-org">Kamaleswaran Lab &middot; Duke University School of Medicine</p>
-          <p>Developing deep learning models for pediatric CHD screening from phonocardiogram signals; collaborating across the medical school and ECE department on translational AI for global health.</p>
-        </div>
-      </li>
-      <li class="timeline-item current">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content tilt">
-          <div class="timeline-meta">
-            <span class="timeline-date">2023 &mdash; Present</span>
-            <span class="timeline-loc">Duke University, NC, USA</span>
+        </li>
+        <li class="pub" data-kind="preprint" data-topics="foundation-models multimodal" data-title="CardioFM: A multimodal foundation model for joint ECG and PPG representation learning">
+          <p class="pub-year">2026</p>
+          <div class="pub-body">
+            <h3 class="pub-title">CardioFM: A multimodal foundation model for joint ECG and PPG representation learning</h3>
+            <p class="pub-authors"><b>M Hassanuzzaman</b>, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal, ...</p>
+            <p class="pub-venue">Research Square (preprint rs-9652631)</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Preprint</span>
+              <span class="tag tag-c" data-cites>3 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@misc{hassanuzzaman2026cardiofm,
+  author       = {M Hassanuzzaman and T Choudhary and A Gent and MV Podgoreanu and SM Agarwal and others},
+  title        = {{CardioFM: A multimodal foundation model for joint ECG and PPG representation learning}},
+  howpublished = {Research Square (preprint rs-9652631)},
+  year         = {2026}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
           </div>
-          <h3>PhD Candidate, Electrical &amp; Computer Engineering</h3>
-          <p class="timeline-org">Duke University &middot; ECE Departmental Fellowship</p>
-          <p>Doctoral research in signal processing and machine learning for healthcare applications, including CHD detection, multi-agent RAG, and multimodal LLM systems.</p>
-        </div>
-      </li>
-      <li class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content tilt">
-          <div class="timeline-meta">
-            <span class="timeline-date">2021 &mdash; 2022</span>
-            <span class="timeline-loc">Bristol, UK</span>
+        </li>
+        <li class="pub" data-kind="preprint" data-topics="tooling physiomarkers" data-title="MPT: A Comprehensive Toolbox for Deriving Cardiorespiratory Physiomarkers from Biosignals with LLM-Based Interpretation">
+          <p class="pub-year">2026</p>
+          <div class="pub-body">
+            <h3 class="pub-title">MPT: A Comprehensive Toolbox for Deriving Cardiorespiratory Physiomarkers from Biosignals with LLM-Based Interpretation</h3>
+            <p class="pub-authors">T Choudhary, <b>M Hassanuzzaman</b>, P Krishnan, A Ali, V Moas, ...</p>
+            <p class="pub-venue">Preprint</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Preprint</span>
+              <span class="tag tag-c" data-cites>1 citation</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@misc{choudhary2026mpt,
+  author       = {T Choudhary and M Hassanuzzaman and P Krishnan and A Ali and V Moas and others},
+  title        = {{MPT: A Comprehensive Toolbox for Deriving Cardiorespiratory Physiomarkers from Biosignals with LLM-Based Interpretation}},
+  howpublished = {Preprint},
+  year         = {2026}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
           </div>
-          <h3>MSc Researcher, Digital Health</h3>
-          <p class="timeline-org">University of Bristol &middot; Think Big Postgraduate Scholar</p>
-          <p>Postgraduate study in Digital Health at the University of Bristol, supported by the Think Big Postgraduate Scholarship.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
+        </li>
+        <li class="pub" data-kind="preprint" data-topics="ssl critical-care" data-title="Self-Supervised Representation Learning from Ventilator Waveforms: A Pilot Feasibility Study">
+          <p class="pub-year">2026</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Self-Supervised Representation Learning from Ventilator Waveforms: A Pilot Feasibility Study</h3>
+            <p class="pub-authors">S Kobara, <b>M Hassanuzzaman</b>, V Krishnamoorthy, T Onuma, ...</p>
+            <p class="pub-venue">Preprint</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Preprint</span>
+              <span class="tag tag-c" data-cites hidden>0 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@misc{kobara2026ventilator,
+  author       = {S Kobara and M Hassanuzzaman and V Krishnamoorthy and T Onuma and others},
+  title        = {{Self-Supervised Representation Learning from Ventilator Waveforms: A Pilot Feasibility Study}},
+  howpublished = {Preprint},
+  year         = {2026}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="journal" data-topics="chd pcg multimodal" data-title="MMMuLNet: Multimodal Mutual Deep learning Framework for the Pediatric Congenital Heart Disease Detection">
+          <p class="pub-year">2026</p>
+          <div class="pub-body">
+            <h3 class="pub-title">MMMuLNet: Multimodal Mutual Deep learning Framework for the Pediatric Congenital Heart Disease Detection</h3>
+            <p class="pub-authors">A Jabbar, <b>M Hassanuzzaman</b>, KI Ahmad, R Mostafa, AH Khandoker, ...</p>
+            <p class="pub-venue">IEEE Journal of Biomedical and Health Informatics</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Journal</span>
+              <span class="tag tag-c" data-cites hidden>0 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@article{jabbar2026mmmulnet,
+  author  = {A Jabbar and M Hassanuzzaman and KI Ahmad and R Mostafa and AH Khandoker and others},
+  title   = {{MMMuLNet: Multimodal Mutual Deep learning Framework for the Pediatric Congenital Heart Disease Detection}},
+  journal = {IEEE Journal of Biomedical and Health Informatics},
+  year    = {2026}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="journal" data-topics="chd pcg transformers" data-title="Classification of short-segment pediatric heart sounds based on a transformer-based convolutional neural network">
+          <p class="pub-year">2025</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Classification of short-segment pediatric heart sounds based on a transformer-based convolutional neural network</h3>
+            <p class="pub-authors"><b>M Hassanuzzaman</b>, SK Ghosh, MNA Hasan, MA Al Mamun, KI Ahmed, ...</p>
+            <p class="pub-venue">IEEE Access, vol. 13, pp. 93852–93868</p>
+            <p class="pub-note">MFCC features into a transformer-based residual 1D-CNN; RMSSD/ZCR signal-quality threshold 0.4; 5 s minimum segment; 93.69% accuracy.</p>
+            <p class="pub-meta">
+              <span class="tag">Journal</span>
+              <span class="tag tag-c" data-cites>23 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@article{hassanuzzaman2025shortsegment,
+  author  = {M Hassanuzzaman and SK Ghosh and MNA Hasan and MA Al Mamun and KI Ahmed and others},
+  title   = {{Classification of short-segment pediatric heart sounds based on a transformer-based convolutional neural network}},
+  journal = {IEEE Access},
+  volume  = {13},
+  pages   = {93852--93868},
+  year    = {2025}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="journal" data-topics="chd pcg fusion global-health" data-title="Automated detection of pediatric congenital heart disease from phonocardiograms using deep and handcrafted feature fusion">
+          <p class="pub-year">2025</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Automated detection of pediatric congenital heart disease from phonocardiograms using deep and handcrafted feature fusion</h3>
+            <p class="pub-authors">A Jabbar, E Grooby, YY Poh, KI Ahmad, <b>M Hassanuzzaman</b>, R Mostafa, ...</p>
+            <p class="pub-venue">Computers in Biology and Medicine, vol. 197, 110993</p>
+            <p class="pub-note">Deep + handcrafted feature fusion on 751 paediatric subjects across four auscultation sites; 92% accuracy, 96% AUROC.</p>
+            <p class="pub-meta">
+              <span class="tag">Journal</span>
+              <span class="tag tag-c" data-cites>14 citations</span>
+              <a class="pub-link" href="https://dukespace.lib.duke.edu/server/api/core/bitstreams/d5afd6a1-4f6f-4ca8-ae68-c888842b0faf/content" target="_blank" rel="noopener">PDF&nbsp;↗</a>
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@article{jabbar2025fusion,
+  author  = {A Jabbar and E Grooby and YY Poh and KI Ahmad and M Hassanuzzaman and R Mostafa and others},
+  title   = {{Automated detection of pediatric congenital heart disease from phonocardiograms using deep and handcrafted feature fusion}},
+  journal = {Computers in Biology and Medicine},
+  volume  = {197},
+  pages   = {110993},
+  year    = {2025},
+  url     = {https://dukespace.lib.duke.edu/server/api/core/bitstreams/d5afd6a1-4f6f-4ca8-ae68-c888842b0faf/content}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="chapter" data-topics="digital-health" data-title="Enhancing Healthcare Through AI, AR, and VR: Integrating Human–Computer Interaction for Improved Teleconsultations and Diagnostic Accuracy">
+          <p class="pub-year">2025</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Enhancing Healthcare Through AI, AR, and VR: Integrating Human–Computer Interaction for Improved Teleconsultations and Diagnostic Accuracy</h3>
+            <p class="pub-authors">H Johnson, J Hayward, JV Lawrence, B Bold, B Biswas, W Li, ...</p>
+            <p class="pub-venue">Augmented and Virtual Reality in Immersive Healthcare, pp. 275–313 (Wiley)</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Book chapter</span>
+              <span class="tag tag-c" data-cites hidden>0 citations</span>
+              <a class="pub-link" href="https://onlinelibrary.wiley.com/doi/10.1002/9781394302864.ch10" target="_blank" rel="noopener">Link&nbsp;↗</a>
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@incollection{johnson2025immersive,
+  author    = {H Johnson and J Hayward and JV Lawrence and B Bold and B Biswas and W Li and others},
+  title     = {{Enhancing Healthcare Through AI, AR, and VR: Integrating Human--Computer Interaction for Improved Teleconsultations and Diagnostic Accuracy}},
+  booktitle = {Augmented and Virtual Reality in Immersive Healthcare},
+  pages     = {275--313},
+  publisher = {Wiley},
+  year      = {2025},
+  url       = {https://onlinelibrary.wiley.com/doi/10.1002/9781394302864.ch10}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="preprint" data-topics="chd pcg global-health" data-title="Congenital Heart Disease Classification Using Phonocardiograms: A Scalable Screening Tool for Diverse Environments">
+          <p class="pub-year">2025</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Congenital Heart Disease Classification Using Phonocardiograms: A Scalable Screening Tool for Diverse Environments</h3>
+            <p class="pub-authors">FM Abdul Jabbar, Ethan Grooby, Jack Crozier, Alexander Gallon, Vivian Pham ...</p>
+            <p class="pub-venue">arXiv:2503.22773</p>
+            <p class="pub-note">94.1% accuracy on the Bangladesh cohort; &gt;85% from a single auscultation site; 80% on recordings cardiologists deemed non-diagnostic.</p>
+            <p class="pub-meta">
+              <span class="tag">Preprint</span>
+              <span class="tag tag-c" data-cites hidden>0 citations</span>
+              <a class="pub-link" href="https://arxiv.org/abs/2503.22773" target="_blank" rel="noopener">arXiv&nbsp;↗</a>
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@misc{jabbar2025scalable,
+  author        = {FM Abdul Jabbar and Ethan Grooby and Jack Crozier and Alexander Gallon and Vivian Pham and others},
+  title         = {{Congenital Heart Disease Classification Using Phonocardiograms: A Scalable Screening Tool for Diverse Environments}},
+  eprint        = {2503.22773},
+  archivePrefix = {arXiv},
+  year          = {2025},
+  url           = {https://arxiv.org/abs/2503.22773}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="preprint" data-topics="fairness" data-title="Skin cancer machine learning model tone bias">
+          <p class="pub-year">2024</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Skin cancer machine learning model tone bias</h3>
+            <p class="pub-authors">J Pope, <b>M Hassanuzzaman</b>, W Chapman, H Day, M Sherpa, O Emara, ...</p>
+            <p class="pub-venue">arXiv:2410.06385</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Preprint</span>
+              <span class="tag tag-c" data-cites>13 citations</span>
+              <a class="pub-link" href="https://arxiv.org/abs/2410.06385" target="_blank" rel="noopener">arXiv&nbsp;↗</a>
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@misc{pope2024tonebias,
+  author        = {J Pope and M Hassanuzzaman and W Chapman and H Day and M Sherpa and O Emara and others},
+  title         = {{Skin cancer machine learning model tone bias}},
+  eprint        = {2410.06385},
+  archivePrefix = {arXiv},
+  year          = {2024},
+  url           = {https://arxiv.org/abs/2410.06385}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="conference" data-topics="chd pcg transformers" data-title="Recognition of pediatric congenital heart diseases by using phonocardiogram signals and transformer-based neural networks">
+          <p class="pub-year">2023</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Recognition of pediatric congenital heart diseases by using phonocardiogram signals and transformer-based neural networks</h3>
+            <p class="pub-authors"><b>M Hassanuzzaman</b>, NA Hasan, MA Al Mamun, M Alkhodari, KI Ahmed, ...</p>
+            <p class="pub-venue">45th Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC)</p>
+            <p class="pub-note">1D-CNN with an attention transformer on raw PCG from 484 patients; 92.3% accuracy, 97.3% sensitivity, 0.964 AUC.</p>
+            <p class="pub-meta">
+              <span class="tag">Conference</span>
+              <span class="tag tag-c" data-cites>19 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@inproceedings{hassanuzzaman2023embc,
+  author    = {M Hassanuzzaman and NA Hasan and MA Al Mamun and M Alkhodari and KI Ahmed and others},
+  title     = {{Recognition of pediatric congenital heart diseases by using phonocardiogram signals and transformer-based neural networks}},
+  booktitle = {45th Annual International Conference of the IEEE Engineering in Medicine \&amp; Biology Society (EMBC)},
+  year      = {2023}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="conference" data-topics="chd pcg" data-title="A deep learning model for recognizing pediatric congenital heart diseases using phonocardiogram signals">
+          <p class="pub-year">2023</p>
+          <div class="pub-body">
+            <h3 class="pub-title">A deep learning model for recognizing pediatric congenital heart diseases using phonocardiogram signals</h3>
+            <p class="pub-authors"><b>M Hassanuzzaman</b>, NA Hasan, MA Al Mamun, KI Ahmed, AH Khandoker, ...</p>
+            <p class="pub-venue">Computing in Cardiology (CinC), vol. 50, pp. 1–4</p>
+            <p class="pub-note">Residual 1D-CNN over 751 patients aged 5 months–20 years; 0.93 accuracy, 0.98 AUC, 4.2 ms inference on 15 s of signal.</p>
+            <p class="pub-meta">
+              <span class="tag">Conference</span>
+              <span class="tag tag-c" data-cites>3 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@inproceedings{hassanuzzaman2023cinc,
+  author    = {M Hassanuzzaman and NA Hasan and MA Al Mamun and KI Ahmed and AH Khandoker and others},
+  title     = {{A deep learning model for recognizing pediatric congenital heart diseases using phonocardiogram signals}},
+  booktitle = {Computing in Cardiology (CinC)},
+  volume    = {50},
+  pages     = {1--4},
+  year      = {2023}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="journal" data-topics="ppg sensing" data-title="Blood glucose level regression for smartphone ppg signals using machine learning">
+          <p class="pub-year">2021</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Blood glucose level regression for smartphone ppg signals using machine learning</h3>
+            <p class="pub-authors">TT Islam, MS Ahmed, <b>M Hassanuzzaman</b>, SA Bin Amir, T Rahman</p>
+            <p class="pub-venue">Applied Sciences, vol. 11, no. 2, 618</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Journal</span>
+              <span class="tag tag-c" data-cites>90 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@article{islam2021glucose,
+  author  = {TT Islam and MS Ahmed and M Hassanuzzaman and SA Bin Amir and T Rahman},
+  title   = {{Blood glucose level regression for smartphone ppg signals using machine learning}},
+  journal = {Applied Sciences},
+  volume  = {11},
+  number  = {2},
+  pages   = {618},
+  year    = {2021}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="journal" data-topics="sensing" data-title="An efficient surface map creation and tracking using smartphone sensors and crowdsourcing">
+          <p class="pub-year">2021</p>
+          <div class="pub-body">
+            <h3 class="pub-title">An efficient surface map creation and tracking using smartphone sensors and crowdsourcing</h3>
+            <p class="pub-authors">MR Ali Sarker, <b>M Hassanuzzaman</b>, P Biswas, SH Dadon, T Imam, ...</p>
+            <p class="pub-venue">Sensors, vol. 21, no. 21, 6969</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Journal</span>
+              <span class="tag tag-c" data-cites>11 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@article{sarker2021surfacemap,
+  author  = {MR Ali Sarker and M Hassanuzzaman and P Biswas and SH Dadon and T Imam and others},
+  title   = {{An efficient surface map creation and tracking using smartphone sensors and crowdsourcing}},
+  journal = {Sensors},
+  volume  = {21},
+  number  = {21},
+  pages   = {6969},
+  year    = {2021}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="conference" data-topics="sensing ecg" data-title="End to end solution for continuous monitoring and real-time analysis of vital signs from ECG signal">
+          <p class="pub-year">2019</p>
+          <div class="pub-body">
+            <h3 class="pub-title">End to end solution for continuous monitoring and real-time analysis of vital signs from ECG signal</h3>
+            <p class="pub-authors"><b>M Hassanuzzaman</b>, P Biswas, T Rahman</p>
+            <p class="pub-venue">IEEE R10 Humanitarian Technology Conference (R10-HTC), pp. 55–60</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Conference</span>
+              <span class="tag tag-c" data-cites>8 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@inproceedings{hassanuzzaman2019vitals,
+  author    = {M Hassanuzzaman and P Biswas and T Rahman},
+  title     = {{End to end solution for continuous monitoring and real-time analysis of vital signs from ECG signal}},
+  booktitle = {IEEE R10 Humanitarian Technology Conference (R10-HTC)},
+  pages     = {55--60},
+  year      = {2019}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub" data-kind="preprint" data-topics="multimodal ehr" data-title="Capacity-Neutral Training Transfers Across Sites in Multimodal Sleep Prediction of Future Cognitive Impairment">
+          <p class="pub-year is-undated">n.d.</p>
+          <div class="pub-body">
+            <h3 class="pub-title">Capacity-Neutral Training Transfers Across Sites in Multimodal Sleep Prediction of Future Cognitive Impairment</h3>
+            <p class="pub-authors">J Kim, A Nagori, T Choudhary, <b>M Hassanuzzaman</b>, R Kamaleswaran</p>
+            <p class="pub-venue">Preprint</p>
+            
+            <p class="pub-meta">
+              <span class="tag">Preprint</span>
+              <span class="tag tag-c" data-cites hidden>0 citations</span>
+              
+              <button type="button" class="pub-act" data-bib-toggle aria-expanded="false">BibTeX</button>
+            </p>
+            <div class="pub-bib" hidden>
+              <pre>@misc{kim2026capacity,
+  author       = {J Kim and A Nagori and T Choudhary and M Hassanuzzaman and R Kamaleswaran},
+  title        = {{Capacity-Neutral Training Transfers Across Sites in Multimodal Sleep Prediction of Future Cognitive Impairment}},
+  howpublished = {Preprint}
+}</pre>
+              <button type="button" class="btn-s" data-bib-copy>Copy</button>
+            </div>
+          </div>
+        </li>
+      <!-- PUBS:END -->
+      </ol>
+      <p class="empty" id="pub-empty" hidden>No publications match that combination.</p>
+    </section>
 
-<!-- ═══════════════════════════════════════════ EDUCATION ═══ -->
-<section id="education">
-  <div class="container">
-    <p class="section-label">Academic Background</p>
-    <h2>Education</h2>
-    <div class="card-grid card-grid-2">
-      <div class="edu-card tilt">
-        <div class="edu-degree">Ph.D., in progress</div>
-        <h3>Electrical &amp; Computer Engineering</h3>
-        <p class="edu-school">Duke University &middot; Durham, NC, USA</p>
-        <ul class="edu-bullets">
-          <li>Advisor: Dr. Rishikesan Kamaleswaran (Kamaleswaran Lab)</li>
-          <li>ECE Departmental Fellowship</li>
-          <li>Focus: signal processing, deep learning, healthcare AI</li>
-        </ul>
-      </div>
-      <div class="edu-card tilt">
-        <div class="edu-degree">M.Sc.</div>
-        <h3>Digital Health</h3>
-        <p class="edu-school">University of Bristol &middot; Bristol, UK</p>
-        <ul class="edu-bullets">
-          <li>Awarded the Think Big Postgraduate Scholarship</li>
-          <li>Foundation for current research in healthcare AI</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- ══ 03 Experience ══ -->
+    <section id="experience" class="sec reveal">
+      <header class="sec-h"><span class="sec-n">03</span><h2>Experience</h2></header>
+      <ol class="entries">
+        <li>
+          <p class="entry-when">2025 — present</p>
+          <div class="entry-body">
+            <h3>Graduate Research Assistant</h3>
+            <p class="entry-where">Kamaleswaran Lab, Duke University School of Medicine · Durham, NC</p>
+            <p>Developing deep learning methods for paediatric congenital heart disease screening
+            from phonocardiograms, and multimodal foundation models over ECG, PPG and electronic
+            health record data. Collaborating across the School of Medicine and the Department of
+            Electrical and Computer Engineering on translational clinical AI.</p>
+          </div>
+        </li>
+        <li>
+          <p class="entry-when">2025 — present</p>
+          <div class="entry-body">
+            <h3>PhD Candidate, Electrical &amp; Computer Engineering</h3>
+            <p class="entry-where">Duke University · Durham, NC</p>
+            <p>Doctoral research in machine learning for physiological signals, supported by an ECE
+            Departmental Fellowship.</p>
+          </div>
+        </li>
+        <li>
+          <p class="entry-when">2021 — 2022</p>
+          <div class="entry-body">
+            <h3>MSc Researcher, Digital Health</h3>
+            <p class="entry-where">University of Bristol · Bristol, United Kingdom</p>
+            <p>Postgraduate research in digital health, supported by the Think Big Postgraduate
+            Scholarship.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-<!-- ═══════════════════════════════════════════ AWARDS ═══ -->
-<section id="awards">
-  <div class="container">
-    <p class="section-label">Recognition</p>
-    <h2>Awards &amp; Honors</h2>
-    <ul class="dates-timeline">
-      <li class="highlight">
-        <span class="dt-event"><strong>ECE Departmental Fellowship</strong> &mdash; Duke University</span>
-        <span class="dt-date">2023 &mdash; Present</span>
-      </li>
-      <li class="highlight">
-        <span class="dt-event"><strong>Think Big Postgraduate Scholarship</strong> &mdash; University of Bristol</span>
-        <span class="dt-date">2021</span>
-      </li>
-      <li>
-        <span class="dt-event">Selected publication, <em>IEEE EMBC</em> &mdash; Transformer-based CHD recognition</span>
-        <span class="dt-date">2023</span>
-      </li>
-      <li>
-        <span class="dt-event">Selected publication, <em>Computing in Cardiology (CinC)</em></span>
-        <span class="dt-date">2023</span>
-      </li>
-    </ul>
-  </div>
-</section>
+    <!-- ══ 04 Education ══ -->
+    <section id="education" class="sec reveal">
+      <header class="sec-h"><span class="sec-n">04</span><h2>Education</h2></header>
+      <ol class="entries">
+        <li>
+          <p class="entry-when">2025 — present</p>
+          <div class="entry-body">
+            <h3>PhD, Electrical &amp; Computer Engineering</h3>
+            <p class="entry-where">Duke University</p>
+            <p>Advised by Dr. Rishikesan Kamaleswaran. Focus: machine learning for physiological
+            signals and clinical decision support.</p>
+          </div>
+        </li>
+        <li>
+          <p class="entry-when">2021 — 2022</p>
+          <div class="entry-body">
+            <h3>MSc, Digital Health</h3>
+            <p class="entry-where">University of Bristol</p>
+            <p>Awarded the Think Big Postgraduate Scholarship.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-<!-- ═══════════════════════════════════════════ SKILLS ═══ -->
-<section id="skills">
-  <div class="container">
-    <p class="section-label">Tooling</p>
-    <h2>Technical Stack</h2>
-    <p>Primary languages, libraries, and tools I reach for:</p>
-    <div class="skills-grid">
-      <div class="skill-card tilt">
-        <div class="skill-head"><span class="skill-dot"></span><h3>Languages</h3></div>
-        <ul class="skill-tags">
-          <li>Python</li><li>MATLAB</li><li>C++</li><li>R</li>
-        </ul>
-      </div>
-      <div class="skill-card tilt">
-        <div class="skill-head"><span class="skill-dot" style="background:var(--accent2)"></span><h3>ML / AI</h3></div>
-        <ul class="skill-tags">
-          <li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>HuggingFace</li><li>LangChain</li>
-        </ul>
-      </div>
-      <div class="skill-card tilt">
-        <div class="skill-head"><span class="skill-dot" style="background:var(--accent3)"></span><h3>Data &amp; Compute</h3></div>
-        <ul class="skill-tags">
-          <li>NumPy</li><li>Pandas</li><li>Matplotlib</li>
-        </ul>
-      </div>
-      <div class="skill-card tilt">
-        <div class="skill-head"><span class="skill-dot"></span><h3>Tools</h3></div>
-        <ul class="skill-tags">
-          <li>Git</li><li>Docker</li><li>Jupyter</li><li>VS Code</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- ══ 05 Recognition ══ -->
+    <section id="recognition" class="sec reveal">
+      <header class="sec-h"><span class="sec-n">05</span><h2>Recognition</h2></header>
+      <ol class="awards">
+        <li><span class="award-y">2025 —</span><span class="award-t"><b>ECE Departmental Fellowship</b>, Duke University</span></li>
+        <li><span class="award-y">2021</span><span class="award-t"><b>Think Big Postgraduate Scholarship</b>, University of Bristol</span></li>
+      </ol>
+    </section>
 
-<!-- ═══════════════════════════════════════════ CONTACT ═══ -->
-<section id="contact">
-  <div class="container">
-    <p class="section-label">Get in touch</p>
-    <h2>Contact</h2>
-    <div class="highlight-card">
-      <p>Open to collaborations on healthcare AI, biomedical signal processing, multi-agent LLM systems, and translational research. I&rsquo;m always happy to chat with students and researchers.</p>
-    </div>
-    <div class="contact-grid">
-      <a href="https://sites.google.com/view/mdhassan" target="_blank" rel="noopener" class="contact-card tilt">
-        <div class="contact-icon" aria-hidden="true">&#127760;</div>
-        <div>
-          <div class="contact-label">Academic Website</div>
-          <div class="contact-value">sites.google.com/view/mdhassan</div>
-        </div>
-      </a>
-      <a href="https://scholars.duke.edu/person/Md.Hassanuzzaman" target="_blank" rel="noopener" class="contact-card tilt">
-        <div class="contact-icon" aria-hidden="true">&#127979;</div>
-        <div>
-          <div class="contact-label">Scholars@Duke</div>
-          <div class="contact-value">scholars.duke.edu</div>
-        </div>
-      </a>
-      <a href="https://scholar.google.com/citations?user=q1ppZrsAAAAJ&amp;hl=en" target="_blank" rel="noopener" class="contact-card tilt">
-        <div class="contact-icon" aria-hidden="true">&#127891;</div>
-        <div>
-          <div class="contact-label">Google Scholar</div>
-          <div class="contact-value">scholar.google.com</div>
-        </div>
-      </a>
-      <a href="https://www.researchgate.net/profile/Md-Hassanuzzaman" target="_blank" rel="noopener" class="contact-card tilt">
-        <div class="contact-icon" aria-hidden="true">&#129516;</div>
-        <div>
-          <div class="contact-label">ResearchGate</div>
-          <div class="contact-value">researchgate.net</div>
-        </div>
-      </a>
-      <a href="https://www.linkedin.com/in/md-hassanuzzaman-b31218b0/" target="_blank" rel="noopener" class="contact-card tilt">
-        <div class="contact-icon" aria-hidden="true">&#128279;</div>
-        <div>
-          <div class="contact-label">LinkedIn</div>
-          <div class="contact-value">md-hassanuzzaman</div>
-        </div>
-      </a>
-      <a href="https://github.com/Hassan1503" target="_blank" rel="noopener" class="contact-card tilt">
-        <div class="contact-icon" aria-hidden="true">&#128187;</div>
-        <div>
-          <div class="contact-label">GitHub</div>
-          <div class="contact-value">@Hassan1503</div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-</main>
+    <!-- ══ 06 Contact ══ -->
+    <section id="contact" class="sec reveal">
+      <header class="sec-h"><span class="sec-n">06</span><h2>Contact</h2></header>
+      <p class="sec-lede">I am glad to hear from researchers working on physiological signals,
+      clinical foundation models, or screening in low-resource settings — and from students
+      considering this area.</p>
+      <ul class="contact">
+        <li><span>Scholars@Duke</span><a href="https://scholars.duke.edu/person/Md.Hassanuzzaman" target="_blank" rel="noopener">scholars.duke.edu/person/Md.Hassanuzzaman</a></li>
+        <li><span>Google Scholar</span><a href="https://scholar.google.com/citations?user=q1ppZrsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Md Hassanuzzaman</a></li>
+        <li><span>ResearchGate</span><a href="https://www.researchgate.net/profile/Md-Hassanuzzaman" target="_blank" rel="noopener">researchgate.net/profile/Md-Hassanuzzaman</a></li>
+        <li><span>GitHub</span><a href="https://github.com/Hassan1503" target="_blank" rel="noopener">github.com/Hassan1503</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/md-hassanuzzaman-b31218b0/" target="_blank" rel="noopener">linkedin.com/in/md-hassanuzzaman</a></li>
+      </ul>
+    </section>
 
-<!-- ═══════════════════════════════════════════ FOOTER ═══ -->
-<footer>
-  <div class="container">
-    <p><strong>Md Hassanuzzaman</strong> &middot; PhD Candidate &middot; Electrical &amp; Computer Engineering &middot; Duke University</p>
-    <p>&copy; <span id="year"></span> Md Hassanuzzaman. Designed and built with care.</p>
-    <p class="footer-mini">Made with vanilla HTML, CSS, JavaScript, and Three.js on GitHub Pages.</p>
-  </div>
+  </main>
+</div>
+
+<footer class="foot">
+  <p><b>Md Hassanuzzaman</b> · PhD Candidate, Electrical &amp; Computer Engineering, Duke University</p>
+  <p>© <span id="year">2026</span> · Built as a static site; citation data refreshed weekly from Google Scholar.</p>
 </footer>
 
-<button id="back-to-top" aria-label="Back to top" title="Back to top">&uarr;</button>
+<div id="toast" role="status" aria-live="polite"></div>
 
-<script src="assets/vendor/three.min.js" defer></script>
-<script src="assets/js/three-hero.js" defer></script>
-<script src="assets/js/main.js" defer></script>
-<script src="assets/js/scholar.js" defer></script>
+<script src="assets/js/figure.js" defer></script>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

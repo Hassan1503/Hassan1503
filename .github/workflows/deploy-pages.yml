@@ -6,9 +6,15 @@ name: Deploy to GitHub Pages
 # gh-pages an exact mirror of main, which triggers the built-in
 # "pages build and deployment" run.
 
+# A push made with GITHUB_TOKEN does not start workflows, so the weekly
+# Scholar commit on main never reached the published site through `push`
+# alone. workflow_run does fire for it, so the refresh now deploys itself.
 on:
   push:
     branches: [main]
+  workflow_run:
+    workflows: ["Update Google Scholar metrics"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -21,8 +27,16 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # On the workflow_run path, only mirror a refresh that actually succeeded
+    # and ran on main; a blocked fetch leaves nothing new to publish.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main')
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: main
       - name: Mirror main to gh-pages
         run: git push --force origin HEAD:gh-pages

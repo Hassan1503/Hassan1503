@@ -23,7 +23,7 @@ OUT = os.environ.get("SCHOLAR_OUT", "assets/data/scholar.json")
 URLS = [
     "https://scholar.google.com/citations?user=%s&hl=en&view_op=list_works&sortby=pubdate&cstart=0&pagesize=100" % USER_ID,
     "https://scholar.google.com/citations?user=%s&hl=en&pagesize=100" % USER_ID,
-    "https://scholar.google.com/citations?hl=en&user=%s" % USER_ID,
+    "https://scholar.google.com/citations?hl=en&user=%s&pagesize=100" % USER_ID,
 ]
 UAS = [
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",

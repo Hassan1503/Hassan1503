@@ -1,144 +1,107 @@
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=120&section=header&fontSize=0" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/img/pcg-banner-dark.svg">
+  <img src="assets/img/pcg-banner-light.svg" alt="A phonocardiogram: normal cardiac cycles, each with a first and second heart sound, followed by cycles in which a systolic murmur fills the silence between them.">
+</picture>
 
 # Md Hassanuzzaman
 
-**PhD Candidate | Electrical and Computer Engineering | Duke University**
+**PhD Candidate · Electrical &amp; Computer Engineering · Duke University**  
+Machine learning for physiological signals — [Kamaleswaran Lab](https://www.kamaleswaran.com/), Duke University School of Medicine
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=3000&pause=1500&color=58A6FF&center=true&vCenter=true&random=false&width=700&lines=Signal+Processing+%26+AI+in+Health+Data;Congenital+Heart+Disease+Detection+via+Phonocardiograms;Multi-Agent+RAG+Systems+%26+Multimodal+LLMs;Deep+Learning+for+Biomedical+Applications)](https://git.io/typing-svg)
-
-[![Website](https://img.shields.io/badge/Academic_Website-4285F4?style=flat-square&logo=google-chrome&logoColor=white)](https://sites.google.com/view/mdhassan)
-[![Scholar](https://img.shields.io/badge/Google_Scholar-4285F4?style=flat-square&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en)
-[![ResearchGate](https://img.shields.io/badge/ResearchGate-00CCBB?style=flat-square&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/Md-Hassanuzzaman)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-hassanuzzaman-b31218b0/)
-[![Duke](https://img.shields.io/badge/Scholars@Duke-001A57?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDNMNCAxMHY0YzAgNS41NSAzLjQxIDEwLjc0IDggMTIgNC41OS0xLjI2IDgtNi40NSA4LTEydi00TDEyIDN6Ii8+PC9zdmc+&logoColor=white)](https://scholars.duke.edu/person/Md.Hassanuzzaman)
-
-</div>
+[Website](https://hassan1503.github.io/Hassan1503/) · [Google Scholar](https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en) · [Scholars@Duke](https://scholars.duke.edu/person/Md.Hassanuzzaman) · [ResearchGate](https://www.researchgate.net/profile/Md-Hassanuzzaman) · [LinkedIn](https://www.linkedin.com/in/md-hassanuzzaman-b31218b0/)
 
 ---
 
-## About
+I build methods that turn raw physiological recordings into reliable clinical decisions. My thesis
+develops automated screening for **congenital heart disease** from heart sounds, designed to hold up
+on inexpensive stethoscopes in settings where echocardiography is out of reach. Alongside it I work
+on **multimodal foundation models** that learn shared representations across ECG, PPG and other
+clinical signals.
 
-I am a PhD candidate in the [Department of Electrical and Computer Engineering](https://ece.duke.edu/) at [Duke University](https://duke.edu/), supported by an ECE departmental fellowship. I conduct research at the [Kamaleswaran Lab](https://www.kamaleswaran.com/) under the supervision of [Dr. Rishikesan Kamaleswaran](https://scholars.duke.edu/person/rishikesan.kamaleswaran), Associate Professor at Duke University School of Medicine.
+I am advised by [Dr. Rishikesan Kamaleswaran](https://scholars.duke.edu/person/rishikesan.kamaleswaran)
+and supported by an ECE Departmental Fellowship. Before Duke I read for an MSc in Digital Health at
+the University of Bristol on a Think Big Postgraduate Scholarship.
 
-My research lies at the intersection of **signal processing**, **deep learning**, and **healthcare AI**, with a primary focus on developing scalable computational methods for **automated diagnosis of congenital heart diseases (CHD)** using phonocardiogram (PCG) signals. I also work on **multi-agent retrieval-augmented generation (RAG) systems** and **multimodal large language models (LLMs)**.
+<!-- SCHOLAR:START -->
+| Citations | h-index | i10-index | Publications |
+|:---------:|:-------:|:---------:|:------------:|
+| **188** | **7** | **6** | **16** |
 
-Prior to Duke, I completed my MSc in Digital Health at the [University of Bristol](https://www.bristol.ac.uk/), UK, where I was awarded the prestigious **Think Big Postgraduate Scholarship**.
+<sub>Google Scholar, 2026-10-31. Refreshed weekly by a scheduled workflow in this repository.</sub>
+<!-- SCHOLAR:END -->
 
-## Research Interests
+## Research
 
-```
-Signal Processing & AI in Health Data  ·  Congenital Heart Disease Detection
-Phonocardiogram Analysis              ·  Deep Learning for Biomedical Applications
-Multi-Agent RAG Systems                ·  Multimodal Large Language Models
-Healthcare AI & Digital Health         ·  Neural Network Architectures
-```
+Six threads run through my work. They share a question: what does it take for a model trained on
+physiological signals to remain trustworthy outside the dataset it was fitted on?
 
-## Selected Publications
+- **Congenital heart disease screening from heart sounds** — Convolutional and attention-based models that detect structural heart defects in children directly from phonocardiograms, validated on a cohort of 751 paediatric subjects recorded at four auscultation sites.
+- **Multimodal foundation models for physiological data** — Representations learned jointly across modalities rather than one signal at a time: CardioFM over ECG and PPG, Clin-JEPA over electronic health record trajectories.
+- **How little signal is enough** — Deployment is bounded by recording quality and length, not by architecture. Five seconds of adequately clean audio supports reliable classification where three does not.
+- **Screening where echocardiography is unavailable** — Models that survive the conditions that actually obtain in low-resource screening: a single auscultation site, ambient noise, recordings a cardiologist would call non-diagnostic.
+- **Physiomarker extraction and interpretation** — Reproducible pipelines that derive cardiorespiratory physiomarkers from raw biosignals, paired with language-model interpretation of what a measurement means.
+- **Fairness and transfer across sites** — Demographic bias in medical imaging models, and whether learned representations transfer across institutions without added capacity.
 
-<table>
-<tr>
-<td width="30"><strong>#</strong></td>
-<td><strong>Publication</strong></td>
-<td width="80" align="center"><strong>Venue</strong></td>
-<td width="50" align="center"><strong>Year</strong></td>
-</tr>
-<tr>
-<td>1</td>
-<td><strong>Congenital Heart Disease Classification Using Phonocardiograms: A Scalable Screening Tool for Diverse Environments</strong><br/><sub>A. Jabbar, E. Grooby, <strong>M. Hassanuzzaman</strong>, et al.</sub></td>
-<td align="center"><a href="https://arxiv.org/abs/2503.22773">arXiv</a></td>
-<td align="center">2025</td>
-</tr>
-<tr>
-<td>2</td>
-<td><strong>Automated Detection of Pediatric Congenital Heart Disease from Phonocardiograms Using Deep and Handcrafted Feature Fusion</strong><br/><sub>A. Jabbar, E. Grooby, <strong>M. Hassanuzzaman</strong>, et al.</sub></td>
-<td align="center"><a href="https://dukespace.lib.duke.edu/server/api/core/bitstreams/d5afd6a1-4f6f-4ca8-ae68-c888842b0faf/content">CBM</a></td>
-<td align="center">2025</td>
-</tr>
-<tr>
-<td>3</td>
-<td><strong>Classification of Short-Segment Pediatric Heart Sounds for Detection of Congenital Heart Disease</strong><br/><sub><strong>M. Hassanuzzaman</strong>, et al.</sub></td>
-<td align="center">IEEE Access</td>
-<td align="center">2025</td>
-</tr>
-<tr>
-<td>4</td>
-<td><strong>Enhancing Healthcare Through AI, AR, and VR</strong><br/><sub><strong>M. Hassanuzzaman</strong>, et al. — Book Chapter</sub></td>
-<td align="center"><a href="https://onlinelibrary.wiley.com/doi/10.1002/9781394302864.ch10">Wiley</a></td>
-<td align="center">2024</td>
-</tr>
-<tr>
-<td>5</td>
-<td><strong>Recognition of Pediatric Congenital Heart Diseases Using Transformer-Based Neural Networks</strong><br/><sub><strong>M. Hassanuzzaman</strong>, et al. — 93% accuracy, 97% sensitivity</sub></td>
-<td align="center">IEEE EMBC</td>
-<td align="center">2023</td>
-</tr>
-<tr>
-<td>6</td>
-<td><strong>A Deep Learning Model for Recognizing Pediatric CHD from PCG Signals</strong><br/><sub><strong>M. Hassanuzzaman</strong>, et al. — 1D-CNN with residual blocks</sub></td>
-<td align="center">CinC</td>
-<td align="center">2023</td>
-</tr>
-</table>
+## Selected publications
 
-<div align="right">
-<sub><a href="https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en">View full publication list on Google Scholar</a></sub>
-</div>
+<!-- PUBS:START -->
+Work I led, work with ten or more citations, and work from this year, where the venue is citable — newest first. Citation counts come from Google Scholar.
+[Full list of 16, with BibTeX, on the site &rarr;](https://hassan1503.github.io/Hassan1503/#publications)
+
+1. **Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories**  
+   Y Yang, M Arora, R Zhang, B Abed, J Kim, T Choudhary et al.  
+   *arXiv:2605.10840*, 2026 · [paper](https://arxiv.org/abs/2605.10840) · 3 citations
+2. **CardioFM: A multimodal foundation model for joint ECG and PPG representation learning**  
+   **M Hassanuzzaman**, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal et al.  
+   *Research Square (preprint rs-9652631)*, 2026 · 3 citations
+3. **MMMuLNet: Multimodal Mutual Deep learning Framework for the Pediatric Congenital Heart Disease Detection**  
+   A Jabbar, **M Hassanuzzaman**, KI Ahmad, R Mostafa, AH Khandoker et al.  
+   *IEEE Journal of Biomedical and Health Informatics*, 2026
+4. **Classification of short-segment pediatric heart sounds based on a transformer-based convolutional neural network**  
+   **M Hassanuzzaman**, SK Ghosh, MNA Hasan, MA Al Mamun, KI Ahmed et al.  
+   *IEEE Access*, vol. 13, pp. 93852–93868, 2025 · 23 citations
+5. **Automated detection of pediatric congenital heart disease from phonocardiograms using deep and handcrafted feature fusion**  
+   A Jabbar, E Grooby, YY Poh, KI Ahmad, **M Hassanuzzaman**, R Mostafa et al.  
+   *Computers in Biology and Medicine*, vol. 197, 110993, 2025 · [paper](https://dukespace.lib.duke.edu/server/api/core/bitstreams/d5afd6a1-4f6f-4ca8-ae68-c888842b0faf/content) · 14 citations
+6. **Skin cancer machine learning model tone bias**  
+   J Pope, **M Hassanuzzaman**, W Chapman, H Day, M Sherpa, O Emara et al.  
+   *arXiv:2410.06385*, 2024 · [paper](https://arxiv.org/abs/2410.06385) · 13 citations
+7. **Recognition of pediatric congenital heart diseases by using phonocardiogram signals and transformer-based neural networks**  
+   **M Hassanuzzaman**, NA Hasan, MA Al Mamun, M Alkhodari, KI Ahmed et al.  
+   *45th Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)*, 2023 · 19 citations
+8. **A deep learning model for recognizing pediatric congenital heart diseases using phonocardiogram signals**  
+   **M Hassanuzzaman**, NA Hasan, MA Al Mamun, KI Ahmed, AH Khandoker et al.  
+   *Computing in Cardiology (CinC)*, vol. 50, pp. 1–4, 2023 · 3 citations
+9. **Blood glucose level regression for smartphone ppg signals using machine learning**  
+   TT Islam, MS Ahmed, **M Hassanuzzaman**, SA Bin Amir, T Rahman  
+   *Applied Sciences*, vol. 11, no. 2, 618, 2021 · 90 citations
+10. **An efficient surface map creation and tracking using smartphone sensors and crowdsourcing**  
+    MR Ali Sarker, **M Hassanuzzaman**, P Biswas, SH Dadon, T Imam et al.  
+    *Sensors*, vol. 21, no. 21, 6969, 2021 · 11 citations
+11. **End to end solution for continuous monitoring and real-time analysis of vital signs from ECG signal**  
+    **M Hassanuzzaman**, P Biswas, T Rahman  
+    *IEEE R10 Humanitarian Technology Conference (R10-HTC)*, pp. 55–60, 2019 · 8 citations
+<!-- PUBS:END -->
 
 ## Education
 
-| Degree | Institution | Field | Notes |
-|:-------|:-----------|:------|:------|
-| **Ph.D.** (in progress) | Duke University, USA | Electrical & Computer Engineering | ECE Fellowship · Kamaleswaran Lab |
-| **M.Sc.** | University of Bristol, UK | Digital Health | Think Big Postgraduate Scholarship |
+| Years | Degree | Institution |
+|:--|:--|:--|
+| 2025 — present | PhD, Electrical &amp; Computer Engineering | Duke University |
+| 2021 — 2022 | MSc, Digital Health | University of Bristol |
 
-## Technical Stack
+## Recognition
 
-<div align="center">
+- **ECE Departmental Fellowship**, Duke University — 2025
+- **Think Big Postgraduate Scholarship**, University of Bristol — 2021
 
-**Languages** &ensp;
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+## Contact
 
-**ML / AI** &ensp;
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white)
+I am glad to hear from researchers working on physiological signals, clinical foundation models, or
+screening in low-resource settings — and from students considering this area. The quickest route is
+[Scholars@Duke](https://scholars.duke.edu/person/Md.Hassanuzzaman) or
+[LinkedIn](https://www.linkedin.com/in/md-hassanuzzaman-b31218b0/).
 
-**Data & Compute** &ensp;
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat-square&logo=python&logoColor=white)
-
-**Tools** &ensp;
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
-
-</div>
-
-## GitHub Analytics
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Hassan1503&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=1F6FEB&text_color=C9D1D9&rank_icon=github" alt="GitHub Stats" height="165"/>
-&ensp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hassan1503&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" alt="Top Languages" height="165"/>
-
-[![GitHub Streak](https://streak-stats.demolab.com/?user=Hassan1503&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=FF6B6B&currStreakLabel=C9D1D9)](https://git.io/streak-stats)
-
-</div>
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=100&section=footer&fontSize=0" width="100%"/>
-
-</div>
+<sub>This profile and the [accompanying site](https://hassan1503.github.io/Hassan1503/) are built
+from this repository. The figure above is synthesised from the same signal model that drives Figure 1
+on the site; the code is in <code>scripts/build_banner.py</code>.</sub>
