@@ -11,6 +11,7 @@ on:
   push:
     paths:
       - scripts/fetch_scholar.py
+      - scripts/build_readme.py
       - .github/workflows/update-scholar.yml
 
 permissions:
@@ -32,16 +33,18 @@ jobs:
           python-version: "3.12"
       - name: Fetch metrics from Google Scholar
         run: python3 scripts/fetch_scholar.py
+      - name: Mirror the metrics into the profile README
+        run: python3 scripts/build_readme.py
       - name: Commit updated data
         run: |
           # Covers both a new file and a modified one; empty means nothing to do
           # (unchanged data, or the fetch was refused and wrote nothing).
-          if [ -z "$(git status --porcelain -- assets/data/scholar.json)" ]; then
-            echo "scholar.json unchanged or not written; nothing to commit"
+          if [ -z "$(git status --porcelain -- assets/data/scholar.json README.md)" ]; then
+            echo "scholar.json and README.md unchanged; nothing to commit"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/data/scholar.json
+          git add assets/data/scholar.json README.md
           git commit -m "Update Google Scholar metrics"
           git push
