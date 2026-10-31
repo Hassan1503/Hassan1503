@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
-"""Fill the generated blocks in README.md (the GitHub profile page).
+"""Write the selected-publication list into README.md (the GitHub profile page).
 
-Two blocks are written from the same data the website uses, so the profile and
-the site can never disagree:
+The list comes from assets/data/publications.json — the same file the website
+builds its publication section from — so authorship, venues and citation counts
+cannot drift between the profile and the site.
 
-  SCHOLAR  citation metrics, from assets/data/scholar.json
-  PUBS     selected publications, from assets/data/publications.json
+The citation-metric table in the same file is handled separately, by
+scripts/sync_metrics.py, which the weekly Scholar workflow runs.
 
-The scholar block is rewritten by .github/workflows/update-scholar.yml each
-week, so the counts on the profile track the ones on the site. Run by hand
-after editing the publication data:  python3 scripts/build_readme.py
+Run after editing the publication data:  python3 scripts/build_readme.py
 """
 import json
 import pathlib
@@ -18,7 +17,6 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBS_DATA = ROOT / "assets/data/publications.json"
-SCHOLAR_DATA = ROOT / "assets/data/scholar.json"
 PAGE = ROOT / "README.md"
 
 SELF = "Hassanuzzaman"
@@ -94,21 +92,6 @@ def main() -> int:
     body += [entry(p, i) for i, p in enumerate(chosen, 1)]
     text = blocks(PAGE.read_text(encoding="utf-8"), "PUBS", "\n".join(body))
 
-    if SCHOLAR_DATA.exists():
-        s = json.loads(SCHOLAR_DATA.read_text(encoding="utf-8"))
-        m = s.get("metrics", {})
-        row = [m.get("citations", {}).get("all"), m.get("h_index", {}).get("all"),
-               m.get("i10_index", {}).get("all"), len(s.get("publications", []))]
-        if all(v is not None for v in row):
-            table = "\n".join([
-                "| Citations | h-index | i10-index | Publications |",
-                "|:---------:|:-------:|:---------:|:------------:|",
-                "| **%s** | **%s** | **%s** | **%s** |" % tuple(row),
-                "",
-                "<sub>Google Scholar, %s. Refreshed weekly by a scheduled workflow in this "
-                "repository.</sub>" % s.get("updated", "date unknown"),
-            ])
-            text = blocks(text, "SCHOLAR", table)
 
     PAGE.write_text(text, encoding="utf-8")
     print("wrote %s: %d selected publications of %d" % (PAGE.name, len(chosen), len(pubs)))
