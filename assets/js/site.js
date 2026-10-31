@@ -15,7 +15,10 @@
     if (!toggle) return;
     var d = isDark();
     toggle.setAttribute('aria-pressed', d ? 'true' : 'false');
-    toggle.setAttribute('aria-label', d ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  function stored() {
+    try { var t = localStorage.getItem('theme'); return t === 'dark' || t === 'light' ? t : null; }
+    catch (e) { return null; }
   }
   if (toggle) {
     syncToggle();
@@ -25,6 +28,16 @@
       try { localStorage.setItem('theme', next); } catch (e) {}
       syncToggle();
     });
+  }
+  if (window.matchMedia) {
+    var os = window.matchMedia('(prefers-color-scheme: dark)');
+    var follow = function () {
+      if (stored()) return;                       // an explicit choice wins
+      document.documentElement.setAttribute('data-theme', os.matches ? 'dark' : 'light');
+      syncToggle();
+    };
+    if (os.addEventListener) os.addEventListener('change', follow);
+    else if (os.addListener) os.addListener(follow);
   }
 
   /* ── Mobile navigation ─────────────────────────────────── */
@@ -179,10 +192,10 @@
     var m = data.metrics || {};
     $$('[data-metric]').forEach(function (el) {
       var key = el.getAttribute('data-metric');
-      if (key === 'publications') {
-        if ((data.publications || []).length) el.textContent = data.publications.length;
-        return;
-      }
+      // The publication count belongs to the list rendered below it, not to
+      // Scholar's index — overriding it here put two different numbers for the
+      // same word on one screen.
+      if (key === 'publications') return;
       if (m[key] && typeof m[key].all === 'number') {
         el.textContent = m[key].all;
         var card = el.closest('[data-metric-card]');

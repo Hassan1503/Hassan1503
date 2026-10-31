@@ -35,9 +35,17 @@ def blocks(text: str, name: str, body: str) -> str:
     return pattern.sub(lambda _: "%s\n%s\n%s" % (start, body, end), text, count=1)
 
 
+MD_SPECIAL = re.compile(r"([\\\\`*_\\[\\]<>])")
+
+
+def md(value: str) -> str:
+    """Escape text being placed into Markdown as literal content."""
+    return MD_SPECIAL.sub(r"\\\\\\1", value)
+
+
 def mark_authors(authors: str) -> str:
     """Bold the subject's own name; turn Scholar's trailing ellipsis into et al."""
-    out = authors.replace(", ...", " et al.").replace("...", "et al.")
+    out = md(authors.replace(", ...", " et al.").replace("...", "et al."))
     return re.sub(r"(\bM(?:d)?\.?\s+%s\b)" % SELF, r"**\1**", out)
 
 
@@ -63,7 +71,7 @@ def selected(pubs: list) -> list:
 def cite_venue(venue: str) -> str:
     """Italicise the journal or proceedings title only, not volume and pages."""
     head, sep, rest = venue.partition(", ")
-    return "*%s*%s%s" % (head, sep, rest)
+    return "*%s*%s%s" % (md(head), sep, md(rest))
 
 
 def entry(p: dict, n: int) -> str:
@@ -75,7 +83,7 @@ def entry(p: dict, n: int) -> str:
         parts.append("%d citation%s" % (cited, "" if cited == 1 else "s"))
     pad = " " * len("%d. " % n)     # continuation lines stay inside the list item
     return "%d. **%s**  \n%s%s  \n%s%s" % (
-        n, p["title"].rstrip("."),
+        n, md(p["title"].rstrip(".")),
         pad, mark_authors(p["authors"]), pad, " · ".join(parts))
 
 
@@ -85,8 +93,8 @@ def main() -> int:
         pubs = pubs.get("publications", [])
     chosen = selected(pubs)
 
-    body = ["Work I led, work with ten or more citations, and work from this year — newest first.",
-            "Citation counts come from Google Scholar.",
+    body = ["Work I led, work with ten or more citations, and work from this year, where the venue "
+            "is citable — newest first. Citation counts come from Google Scholar.",
             "[Full list of %d, with BibTeX, on the site &rarr;](%s#publications)" % (len(pubs), SITE),
             ""]
     body += [entry(p, i) for i, p in enumerate(chosen, 1)]

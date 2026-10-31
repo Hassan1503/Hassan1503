@@ -140,10 +140,9 @@
   }
   function setPlaying(on) {
     playing = on; last = null;
-    if (ui.play) {
-      ui.play.setAttribute('aria-pressed', on ? 'true' : 'false');
-      ui.play.textContent = on ? 'Pause' : 'Play';
-    }
+    // The label is the state; a second announcement via aria-pressed would
+    // contradict it ("Pause, pressed").
+    if (ui.play) ui.play.textContent = on ? 'Pause' : 'Play';
     if (on && !raf) raf = requestAnimationFrame(frame);
   }
 

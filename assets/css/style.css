@@ -8,12 +8,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
+  color-scheme: light;
   --paper:     #fcfcfa;
   --paper-2:   #f5f4f0;
   --card:      #ffffff;
   --ink:       #15181f;
   --ink-2:     #4a505c;
-  --ink-3:     #767d8a;
+  --ink-3:     #606775;
   --rule:      #e2e1db;
   --rule-2:    #cfcec7;
   --accent:    #012169;   /* Duke navy */
@@ -35,6 +36,7 @@
 }
 
 html[data-theme="dark"] {
+  color-scheme: dark;
   --paper:     #0f1116;
   --paper-2:   #161920;
   --card:      #161920;
@@ -80,7 +82,7 @@ b, strong { font-weight: 600; color: var(--ink); }
 
 .skip {
   position: absolute; top: -60px; left: 1rem; z-index: 60;
-  background: var(--accent); color: #fff; padding: .6rem 1.1rem;
+  background: var(--accent); color: var(--paper); padding: .6rem 1.1rem;
   border-radius: var(--radius); font-size: .9rem; font-weight: 500;
 }
 .skip:focus { top: .75rem; text-decoration: none; }
@@ -88,6 +90,7 @@ b, strong { font-weight: 600; color: var(--ink); }
 /* ── Top bar ────────────────────────────────────────────────── */
 .topbar {
   position: sticky; top: 0; z-index: 50;
+  background: var(--paper);
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
@@ -164,7 +167,7 @@ main { min-width: 0; padding-bottom: 4rem; }
 }
 .masthead h1 {
   font-family: var(--serif); font-weight: 500;
-  font-size: clamp(2.6rem, 7.2vw, 4.6rem); line-height: 1.02;
+  font-size: clamp(2.3rem, 7.2vw, 4.6rem); line-height: 1.02;
   letter-spacing: -.027em; margin-bottom: .55rem;
 }
 .role {
@@ -190,6 +193,7 @@ main { min-width: 0; padding-bottom: 4rem; }
 
 /* ── Figure 1 ───────────────────────────────────────────────── */
 .fig { margin: 0 0 clamp(2.2rem, 5vw, 3.4rem); }
+.fig-fallback { width: 100%; height: auto; display: block; }
 .fig-frame {
   background: var(--card); border: 1px solid var(--rule);
   border-radius: var(--radius); padding: .5rem .3rem 0;
@@ -391,8 +395,8 @@ main { min-width: 0; padding-bottom: 4rem; }
 #toast.is-up { opacity: 1; transform: translate(-50%, 0); }
 
 /* ── Reveal ─────────────────────────────────────────────────── */
-.reveal { opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
-.reveal.is-in { opacity: 1; transform: none; }
+.js .reveal { opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
+.js .reveal.is-in { opacity: 1; transform: none; }
 
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 760px) {
@@ -418,18 +422,25 @@ main { min-width: 0; padding-bottom: 4rem; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
   * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }
 
 /* ── Print ──────────────────────────────────────────────────── */
 @media print {
+  /* Printing from the dark theme must not carry its tokens onto white paper. */
+  :root, html[data-theme="dark"] {
+    --paper: #fff; --paper-2: #fff; --card: #fff;
+    --ink: #000; --ink-2: #222; --ink-3: #444;
+    --rule: #bbb; --rule-2: #999;
+    --accent: #000; --accent-2: #000; --accent-sf: transparent; --sign: #000;
+  }
   .topbar, .rail, .fig-ctl, .filters, .theme-toggle, #toast, .pub-act, .btn-s { display: none !important; }
   body { background: #fff; color: #000; font-size: 10.5pt; }
   .shell { display: block; max-width: none; padding: 0; }
   .sec { padding: 14pt 0; break-inside: avoid; }
   .pub, .entries > li { break-inside: avoid; }
-  .reveal { opacity: 1; transform: none; }
+  .js .reveal { opacity: 1; transform: none; }
   .pub-link::after { content: ' (' attr(href) ')'; font-size: 8pt; color: #555; }
   a { color: #000; }
 }

@@ -1,20 +1,4 @@
 {
- "updated": "2026-10-26",
- "metrics": {
-  "citations": {
-   "all": 186,
-   "since": 184
-  },
-  "h_index": {
-   "all": 7,
-   "since": 7
-  },
-  "i10_index": {
-   "all": 6,
-   "since": 6
-  },
-  "since_year": 2021
- },
  "publications": [
   {
    "title": "Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories",
@@ -34,7 +18,7 @@
    "title": "CardioFM: A multimodal foundation model for joint ECG and PPG representation learning",
    "authors": "M Hassanuzzaman, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal, ...",
    "year": 2026,
-   "cited_by": 2,
+   "cited_by": 3,
    "scholarVenue": "Research Square, rs. 3. rs-9652631, 2026",
    "venueFull": "Research Square (preprint rs-9652631)",
    "venueShort": "Preprint",
@@ -188,7 +172,7 @@
    "title": "Blood glucose level regression for smartphone ppg signals using machine learning",
    "authors": "TT Islam, MS Ahmed, M Hassanuzzaman, SA Bin Amir, T Rahman",
    "year": 2021,
-   "cited_by": 89,
+   "cited_by": 90,
    "scholarVenue": "Applied Sciences 11 (2), 618, 2021",
    "venueFull": "Applied Sciences, vol. 11, no. 2, 618",
    "venueShort": "Applied Sciences",

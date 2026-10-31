@@ -55,7 +55,7 @@ SHOT = """
 const { chromium } = require('playwright');
 (async () => {
   const b = await chromium.launch({ args: ['--no-sandbox'] });
-  const p = await b.newPage({ viewportSize: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
+  const p = await b.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
   await p.goto('file://' + process.argv[2]);
   await p.waitForTimeout(500);
   await p.screenshot({ path: process.argv[3] });

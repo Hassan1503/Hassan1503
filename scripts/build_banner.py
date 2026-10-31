@@ -86,8 +86,8 @@ def render(theme):
     c = THEMES[theme]
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" '
-        'role="img" aria-label="A phonocardiogram: five normal cardiac cycles, each with a first '
-        'and second heart sound, followed by cycles in which a systolic murmur fills the silence '
+        'role="img" aria-label="A phonocardiogram: normal cardiac cycles, each with a first and '
+        'second heart sound, followed by cycles in which a systolic murmur fills the silence '
         'between them.">' % (W, H, W, H),
         '<rect width="%d" height="%d" fill="%s"/>' % (W, H, c["bg"]),
     ]

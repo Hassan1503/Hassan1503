@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/img/pcg-banner-dark.svg">
-  <img src="assets/img/pcg-banner-light.svg" alt="A phonocardiogram: five normal cardiac cycles, each with a first and second heart sound, followed by cycles in which a systolic murmur fills the silence between them.">
+  <img src="assets/img/pcg-banner-light.svg" alt="A phonocardiogram: normal cardiac cycles, each with a first and second heart sound, followed by cycles in which a systolic murmur fills the silence between them.">
 </picture>
 
 # Md Hassanuzzaman
@@ -45,8 +45,7 @@ physiological signals to remain trustworthy outside the dataset it was fitted on
 ## Selected publications
 
 <!-- PUBS:START -->
-Work I led, work with ten or more citations, and work from this year — newest first.
-Citation counts come from Google Scholar.
+Work I led, work with ten or more citations, and work from this year, where the venue is citable — newest first. Citation counts come from Google Scholar.
 [Full list of 16, with BibTeX, on the site &rarr;](https://hassan1503.github.io/Hassan1503/#publications)
 
 1. **Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories**  
@@ -54,7 +53,7 @@ Citation counts come from Google Scholar.
    *arXiv:2605.10840*, 2026 · [paper](https://arxiv.org/abs/2605.10840) · 3 citations
 2. **CardioFM: A multimodal foundation model for joint ECG and PPG representation learning**  
    **M Hassanuzzaman**, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal et al.  
-   *Research Square (preprint rs-9652631)*, 2026 · 2 citations
+   *Research Square (preprint rs-9652631)*, 2026 · 3 citations
 3. **MMMuLNet: Multimodal Mutual Deep learning Framework for the Pediatric Congenital Heart Disease Detection**  
    A Jabbar, **M Hassanuzzaman**, KI Ahmad, R Mostafa, AH Khandoker et al.  
    *IEEE Journal of Biomedical and Health Informatics*, 2026
@@ -75,7 +74,7 @@ Citation counts come from Google Scholar.
    *Computing in Cardiology (CinC)*, vol. 50, pp. 1–4, 2023 · 3 citations
 9. **Blood glucose level regression for smartphone ppg signals using machine learning**  
    TT Islam, MS Ahmed, **M Hassanuzzaman**, SA Bin Amir, T Rahman  
-   *Applied Sciences*, vol. 11, no. 2, 618, 2021 · 89 citations
+   *Applied Sciences*, vol. 11, no. 2, 618, 2021 · 90 citations
 10. **An efficient surface map creation and tracking using smartphone sensors and crowdsourcing**  
     MR Ali Sarker, **M Hassanuzzaman**, P Biswas, SH Dadon, T Imam et al.  
     *Sensors*, vol. 21, no. 21, 6969, 2021 · 11 citations

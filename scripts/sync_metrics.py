@@ -20,6 +20,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "assets/data/scholar.json"
+PUBS = ROOT / "assets/data/publications.json"
 PAGE = ROOT / "index.html"
 PROFILE = ROOT / "README.md"
 
@@ -27,11 +28,17 @@ PROFILE = ROOT / "README.md"
 def read_metrics() -> dict:
     s = json.loads(DATA.read_text(encoding="utf-8"))
     m = s.get("metrics", {})
+    # The publication count comes from the curated list, not from Scholar's,
+    # so the headline figure always equals the number of entries printed
+    # underneath it. Scholar's own count can and does differ.
+    curated = json.loads(PUBS.read_text(encoding="utf-8"))
+    if isinstance(curated, dict):
+        curated = curated.get("publications", [])
     values = {
         "citations": m.get("citations", {}).get("all"),
         "h_index": m.get("h_index", {}).get("all"),
         "i10_index": m.get("i10_index", {}).get("all"),
-        "publications": len(s.get("publications", [])) or None,
+        "publications": len(curated) or None,
     }
     if any(v is None for v in values.values()):
         sys.exit("scholar.json is missing one of the metrics; nothing written")
@@ -42,8 +49,14 @@ def read_metrics() -> dict:
 def sync_page(v: dict) -> bool:
     text = before = PAGE.read_text(encoding="utf-8")
     for key in ("citations", "h_index", "i10_index", "publications"):
-        text = re.sub(r'(data-metric="%s">)[^<]*(</span>)' % key,
-                      r"\g<1>%d\g<2>" % v[key], text)
+        # re.subn, not re.sub: a substitution count of zero means the markup
+        # moved and this script is now silently writing nothing, which would
+        # otherwise look identical to "the numbers were already correct".
+        text, hits = re.subn(r'(data-metric="%s">)[^<]*(</span>)' % key,
+                             lambda m: "%s%d%s" % (m.group(1), v[key], m.group(2)), text)
+        if hits != 1:
+            sys.exit("index.html: expected exactly one [data-metric=\"%s\"] card, found %d"
+                     % (key, hits))
     if text == before:
         return False
     PAGE.write_text(text, encoding="utf-8")

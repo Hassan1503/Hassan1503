@@ -30,21 +30,83 @@ def mark_authors(authors: str) -> str:
     return re.sub(r"(\bM(?:d)?\.?\s+%s\b)" % SELF, r"<b>\1</b>", out)
 
 
+# BibTeX is LaTeX source: these characters change its meaning if left bare.
+# The one `&` in the real data ("Medicine & Biology Society") is enough to stop
+# an entry typesetting at all.
+TEX_ESCAPES = {
+    "\\": r"\textbackslash{}", "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#",
+    "_": r"\_", "{": r"\{", "}": r"\}", "~": r"\textasciitilde{}",
+    "^": r"\textasciicircum{}", "\u2013": "--", "\u2014": "---",
+}
+VOLUME = re.compile(r"\bvol\.\s*([0-9]+)", re.I)
+NUMBER = re.compile(r"\bno\.\s*([0-9]+)", re.I)
+PAGES = re.compile(r"\bpp?\.\s*([0-9]+(?:\s*[\u2013\u2014-]\s*[0-9]+)?)", re.I)
+ARXIV = re.compile(r"\barXiv:\s*([0-9]{4}\.[0-9]{4,5}(?:v[0-9]+)?)", re.I)
+
+
+def tex(value: str) -> str:
+    return "".join(TEX_ESCAPES.get(ch, ch) for ch in value)
+
+
+def bib_authors(raw: str) -> str:
+    """Scholar truncates long author lists with an ellipsis. BibTeX's word for
+    "and the rest" is the literal `others`; dropping the ellipsis instead would
+    present a partial list as though it were complete."""
+    text = raw.strip()
+    truncated = bool(re.search(r"(\.\.\.|\u2026)\s*$", text))
+    text = re.sub(r",?\s*(\.\.\.|\u2026)\s*$", "", text)
+    names = [tex(a.strip()) for a in text.split(",") if a.strip()]
+    if truncated:
+        names.append("others")
+    return " and ".join(names)
+
+
+def split_venue(venue: str):
+    """Separate the journal or proceedings title from volume, issue and pages,
+    which belong in their own fields rather than folded into the name."""
+    head, _, rest = venue.partition(", ")
+    extras, leftover = [], rest
+    for field, pattern in (("volume", VOLUME), ("number", NUMBER), ("pages", PAGES)):
+        m = pattern.search(leftover)
+        if not m:
+            continue
+        value = m.group(1)
+        if field == "pages":
+            value = re.sub(r"\s*[\u2013\u2014-]\s*", "--", value)
+        extras.append((field, value))
+        leftover = (leftover[:m.start()] + leftover[m.end():])
+    leftover = leftover.strip(" ,")
+    # An article number stands in for a page range; a trailing parenthetical at
+    # this point is the publisher ("... pp. 275-313 (Wiley)").
+    if leftover.isdigit() and not any(k == "pages" for k, _ in extras):
+        extras.append(("pages", leftover))
+        leftover = ""
+    m = re.fullmatch(r"\(([^()]+)\)", leftover)
+    if m:
+        extras.append(("publisher", m.group(1)))
+        leftover = ""
+    return head.strip(), extras, leftover
+
+
 def bibtex(p: dict) -> str:
     btype = BIB_TYPE.get(p["kind"], "misc")
-    authors = " and ".join(
-        a.strip() for a in p["authors"].replace(", ...", "").split(",") if a.strip()
-    )
-    fields = [("author", authors), ("title", p["title"])]
-    venue = p["venueFull"] or p["scholarVenue"]
-    if btype == "article":
-        fields.append(("journal", venue))
-    elif btype == "inproceedings":
-        fields.append(("booktitle", venue))
-    elif btype == "incollection":
-        fields.append(("booktitle", venue))
-    else:
-        fields.append(("howpublished", venue))
+    venue = p["venueFull"] or p["scholarVenue"] or ""
+    # Double braces keep the publisher's capitalisation through styles that
+    # would otherwise lowercase the title.
+    fields = [("author", bib_authors(p["authors"])), ("title", "{%s}" % tex(p["title"]))]
+
+    arxiv = ARXIV.search(venue)
+    if arxiv:
+        fields += [("eprint", arxiv.group(1)), ("archivePrefix", "arXiv")]
+    elif venue:
+        name, extras, leftover = split_venue(venue)
+        key = {"article": "journal", "inproceedings": "booktitle",
+               "incollection": "booktitle"}.get(btype, "howpublished")
+        fields.append((key, tex(name)))
+        fields += [(k, tex(v)) for k, v in extras]
+        if leftover:
+            fields.append(("note", tex(leftover)))
+
     if p["year"]:
         fields.append(("year", str(p["year"])))
     if p.get("url"):
