@@ -15,8 +15,8 @@
    "key": "yang2026clinjepa"
   },
   {
-   "title": "CardioFM: A multimodal foundation model for joint ECG and PPG representation learning",
-   "authors": "M Hassanuzzaman, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal, ...",
+   "title": "CardioFM: A Multimodal Foundation Model for Joint ECG and PPG Representation Learning",
+   "authors": "Md Hassanuzzaman, Tilendra Choudhary, Alasdair Gent, Mihai V. Podgoreanu, Suresh Agarwal, Vijay Krishnamoorthy, Sivasubramanium V. Bhavani, Philip Yang, Annette M. Esper, Rishikesan Kamaleswaran",
    "year": 2026,
    "cited_by": 3,
    "scholarVenue": "Research Square, rs. 3. rs-9652631, 2026",
@@ -24,13 +24,14 @@
    "venueShort": "Preprint",
    "kind": "preprint",
    "topics": "foundation-models multimodal",
-   "url": "",
+   "url": "https://doi.org/10.21203/rs.3.rs-9652631/v1",
    "note": "",
-   "key": "hassanuzzaman2026cardiofm"
+   "key": "hassanuzzaman2026cardiofm",
+   "doi": "10.21203/rs.3.rs-9652631/v1"
   },
   {
    "title": "MPT: A Comprehensive Toolbox for Deriving Cardiorespiratory Physiomarkers from Biosignals with LLM-Based Interpretation",
-   "authors": "T Choudhary, M Hassanuzzaman, P Krishnan, A Ali, V Moas, ...",
+   "authors": "Tilendra Choudhary, Md Hassanuzzaman, Preethi Krishnan, Ayman Ali, Victor M. Moas, Rishikesan Kamaleswaran",
    "year": 2026,
    "cited_by": 1,
    "scholarVenue": "",
@@ -38,9 +39,10 @@
    "venueShort": "Preprint",
    "kind": "preprint",
    "topics": "tooling physiomarkers",
-   "url": "",
+   "url": "https://doi.org/10.21203/rs.3.rs-8419239/v1",
    "note": "",
-   "key": "choudhary2026mpt"
+   "key": "choudhary2026mpt",
+   "doi": "10.21203/rs.3.rs-8419239/v1"
   },
   {
    "title": "Self-Supervised Representation Learning from Ventilator Waveforms: A Pilot Feasibility Study",
@@ -71,8 +73,8 @@
    "key": "jabbar2026mmmulnet"
   },
   {
-   "title": "Classification of short-segment pediatric heart sounds based on a transformer-based convolutional neural network",
-   "authors": "M Hassanuzzaman, SK Ghosh, MNA Hasan, MA Al Mamun, KI Ahmed, ...",
+   "title": "Classification of Short-Segment Pediatric Heart Sounds Based on a Transformer-Based Convolutional Neural Network",
+   "authors": "Md Hassanuzzaman, Samit Kumar Ghosh, Mohammad Nurul Akhtar Hasan, Mohammad Abdullah Al Mamun, Khawza Iftekhar Uddin Ahmed, Raqibul Mostafa, Ahsan Habib Khandoker",
    "year": 2025,
    "cited_by": 23,
    "scholarVenue": "IEEE Access 13, 93852-93868, 2025",
@@ -80,13 +82,14 @@
    "venueShort": "IEEE Access",
    "kind": "journal",
    "topics": "chd pcg transformers",
-   "url": "",
+   "url": "https://doi.org/10.1109/ACCESS.2025.3573870",
    "note": "MFCC features into a transformer-based residual 1D-CNN; RMSSD/ZCR signal-quality threshold 0.4; 5 s minimum segment; 93.69% accuracy.",
-   "key": "hassanuzzaman2025shortsegment"
+   "key": "hassanuzzaman2025shortsegment",
+   "doi": "10.1109/ACCESS.2025.3573870"
   },
   {
    "title": "Automated detection of pediatric congenital heart disease from phonocardiograms using deep and handcrafted feature fusion",
-   "authors": "A Jabbar, E Grooby, YY Poh, KI Ahmad, M Hassanuzzaman, R Mostafa, ...",
+   "authors": "Abdul Jabbar, Ethan Grooby, Yang Yi Poh, Khawza I. Ahmad, Md Hassanuzzaman, Raqibul Mostafa, Ahsan Habib Khandoker, Faezeh Marzbanrad",
    "year": 2025,
    "cited_by": 14,
    "scholarVenue": "Computers in Biology and Medicine 197, 110993, 2025",
@@ -96,11 +99,12 @@
    "topics": "chd pcg fusion global-health",
    "url": "https://dukespace.lib.duke.edu/server/api/core/bitstreams/d5afd6a1-4f6f-4ca8-ae68-c888842b0faf/content",
    "note": "Deep + handcrafted feature fusion on 751 paediatric subjects across four auscultation sites; 92% accuracy, 96% AUROC.",
-   "key": "jabbar2025fusion"
+   "key": "jabbar2025fusion",
+   "doi": "10.1016/j.compbiomed.2025.110993"
   },
   {
    "title": "Enhancing Healthcare Through AI, AR, and VR: Integrating Human–Computer Interaction for Improved Teleconsultations and Diagnostic Accuracy",
-   "authors": "H Johnson, J Hayward, JV Lawrence, B Bold, B Biswas, W Li, ...",
+   "authors": "Hans Johnson, Joshua Hayward, Joseph Vayalil Lawrence, Bayarbaatar Bold, Bijetri Biswas, Weiyi Li, Md Hassanuzzaman, Chris Jacobs",
    "year": 2025,
    "cited_by": 0,
    "scholarVenue": "Augmented and Virtual Reality in Immersive Healthcare, 275-313, 2025",
@@ -110,7 +114,8 @@
    "topics": "digital-health",
    "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781394302864.ch10",
    "note": "",
-   "key": "johnson2025immersive"
+   "key": "johnson2025immersive",
+   "doi": "10.1002/9781394302864.ch10"
   },
   {
    "title": "Congenital Heart Disease Classification Using Phonocardiograms: A Scalable Screening Tool for Diverse Environments",
@@ -127,8 +132,8 @@
    "key": "jabbar2025scalable"
   },
   {
-   "title": "Skin cancer machine learning model tone bias",
-   "authors": "J Pope, M Hassanuzzaman, W Chapman, H Day, M Sherpa, O Emara, ...",
+   "title": "Skin Cancer Machine Learning Model Tone Bias",
+   "authors": "James Pope, Md Hassanuzzaman, William Chapman, Huw Day, Mingmar Sherpa, Omar Emara, Nirmala Adhikari, Ayush Joshi",
    "year": 2024,
    "cited_by": 13,
    "scholarVenue": "arXiv preprint arXiv:2410.06385, 2024",
@@ -138,11 +143,12 @@
    "topics": "fairness",
    "url": "https://arxiv.org/abs/2410.06385",
    "note": "",
-   "key": "pope2024tonebias"
+   "key": "pope2024tonebias",
+   "doi": "10.48550/arXiv.2410.06385"
   },
   {
-   "title": "Recognition of pediatric congenital heart diseases by using phonocardiogram signals and transformer-based neural networks",
-   "authors": "M Hassanuzzaman, NA Hasan, MA Al Mamun, M Alkhodari, KI Ahmed, ...",
+   "title": "Recognition of Pediatric Congenital Heart Diseases by Using Phonocardiogram Signals and Transformer-Based Neural Networks",
+   "authors": "Md Hassanuzzaman, Nurul Akhtar Hasan, Mohammad Abdullah Al Mamun, Mohanad Alkhodari, Khawza Iftekhar Uddin Ahmed, Ahsan Habib Khandoker, Raqibul Mostafa",
    "year": 2023,
    "cited_by": 19,
    "scholarVenue": "2023 45th Annual International Conference of the IEEE Engineering in …, 2023",
@@ -150,13 +156,14 @@
    "venueShort": "IEEE EMBC",
    "kind": "conference",
    "topics": "chd pcg transformers",
-   "url": "",
+   "url": "https://doi.org/10.1109/EMBC40787.2023.10340370",
    "note": "1D-CNN with an attention transformer on raw PCG from 484 patients; 92.3% accuracy, 97.3% sensitivity, 0.964 AUC.",
-   "key": "hassanuzzaman2023embc"
+   "key": "hassanuzzaman2023embc",
+   "doi": "10.1109/EMBC40787.2023.10340370"
   },
   {
-   "title": "A deep learning model for recognizing pediatric congenital heart diseases using phonocardiogram signals",
-   "authors": "M Hassanuzzaman, NA Hasan, MA Al Mamun, KI Ahmed, AH Khandoker, ...",
+   "title": "A Deep Learning Model for Recognizing Pediatric Congenital Heart Diseases Using Phonocardiogram Signals",
+   "authors": "Md Hassanuzzaman, Nurul Akhtar Hasan, Mohammad Abdullah Al Mamun, Khawza Iftekhar Uddin Ahmed, Ahsan Habib Khandoker, Raqibul Mostafa",
    "year": 2023,
    "cited_by": 3,
    "scholarVenue": "2023 Computing in Cardiology (CinC) 50, 1-4, 2023",
@@ -164,13 +171,14 @@
    "venueShort": "CinC",
    "kind": "conference",
    "topics": "chd pcg",
-   "url": "",
+   "url": "https://doi.org/10.22489/CinC.2023.146",
    "note": "Residual 1D-CNN over 751 patients aged 5 months–20 years; 0.93 accuracy, 0.98 AUC, 4.2 ms inference on 15 s of signal.",
-   "key": "hassanuzzaman2023cinc"
+   "key": "hassanuzzaman2023cinc",
+   "doi": "10.22489/CinC.2023.146"
   },
   {
-   "title": "Blood glucose level regression for smartphone ppg signals using machine learning",
-   "authors": "TT Islam, MS Ahmed, M Hassanuzzaman, SA Bin Amir, T Rahman",
+   "title": "Blood Glucose Level Regression for Smartphone PPG Signals Using Machine Learning",
+   "authors": "Tanvir Tazul Islam, Md. Sibbir Ahmed, Md Hassanuzzaman, Syed Athar Bin Amir, Tanzilur Rahman",
    "year": 2021,
    "cited_by": 90,
    "scholarVenue": "Applied Sciences 11 (2), 618, 2021",
@@ -178,13 +186,14 @@
    "venueShort": "Applied Sciences",
    "kind": "journal",
    "topics": "ppg sensing",
-   "url": "",
+   "url": "https://doi.org/10.3390/app11020618",
    "note": "",
-   "key": "islam2021glucose"
+   "key": "islam2021glucose",
+   "doi": "10.3390/app11020618"
   },
   {
-   "title": "An efficient surface map creation and tracking using smartphone sensors and crowdsourcing",
-   "authors": "MR Ali Sarker, M Hassanuzzaman, P Biswas, SH Dadon, T Imam, ...",
+   "title": "An Efficient Surface Map Creation and Tracking Using Smartphone Sensors and Crowdsourcing",
+   "authors": "Md. Rabiul Ali Sarker, Md Hassanuzzaman, Purnendu Biswas, Saikot Hossain Dadon, Tasmina Imam, Tanzilur Rahman",
    "year": 2021,
    "cited_by": 11,
    "scholarVenue": "Sensors 21 (21), 6969, 2021",
@@ -192,13 +201,14 @@
    "venueShort": "Sensors",
    "kind": "journal",
    "topics": "sensing",
-   "url": "",
+   "url": "https://doi.org/10.3390/s21216969",
    "note": "",
-   "key": "sarker2021surfacemap"
+   "key": "sarker2021surfacemap",
+   "doi": "10.3390/s21216969"
   },
   {
-   "title": "End to end solution for continuous monitoring and real-time analysis of vital signs from ECG signal",
-   "authors": "M Hassanuzzaman, P Biswas, T Rahman",
+   "title": "End to End Solution for Continuous Monitoring and Real-Time Analysis of Vital Signs from ECG Signal",
+   "authors": "Md Hassanuzzaman, Purnendu Biswas, Tanzilur Rahman",
    "year": 2019,
    "cited_by": 8,
    "scholarVenue": "2019 IEEE R10 Humanitarian Technology Conference (R10-HTC)(47129), 55-60, 2019",
@@ -206,9 +216,10 @@
    "venueShort": "IEEE R10-HTC",
    "kind": "conference",
    "topics": "sensing ecg",
-   "url": "",
+   "url": "https://doi.org/10.1109/R10-HTC47129.2019.9042478",
    "note": "",
-   "key": "hassanuzzaman2019vitals"
+   "key": "hassanuzzaman2019vitals",
+   "doi": "10.1109/R10-HTC47129.2019.9042478"
   },
   {
    "title": "Capacity-Neutral Training Transfers Across Sites in Multimodal Sleep Prediction of Future Cognitive Impairment",

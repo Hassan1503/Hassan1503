@@ -109,6 +109,8 @@ def bibtex(p: dict) -> str:
 
     if p["year"]:
         fields.append(("year", str(p["year"])))
+    if p.get("doi"):
+        fields.append(("doi", p["doi"]))
     if p.get("url"):
         fields.append(("url", p["url"]))
     width = max(len(k) for k, _ in fields)
@@ -125,11 +127,16 @@ def render(p: dict, index: int) -> str:
     cite_txt = "1 citation" if cited == 1 else "%d citations" % cited
     cite_hidden = "" if cited else " hidden"
 
-    links = ""
-    if p.get("url"):
-        label = "arXiv" if "arxiv.org" in p["url"] else ("PDF" if p["url"].endswith("content") else "Link")
-        links = ('<a class="pub-link" href="%s" target="_blank" rel="noopener">%s&nbsp;↗</a>'
-                 % (html.escape(p["url"]), label))
+    parts = []
+    if p.get("doi"):
+        parts.append('<a class="pub-doi" href="https://doi.org/%s" target="_blank" rel="noopener">'
+                     'doi:%s</a>' % (html.escape(p["doi"]), html.escape(p["doi"])))
+    url = p.get("url") or ""
+    if url and not url.startswith("https://doi.org/"):
+        label = "arXiv" if "arxiv.org" in url else ("PDF" if url.endswith("content") else "Link")
+        parts.append('<a class="pub-link" href="%s" target="_blank" rel="noopener">%s&nbsp;↗</a>'
+                     % (html.escape(url), label))
+    links = "\n              ".join(parts)
 
     note = ('<p class="pub-note">%s</p>' % html.escape(p["note"])) if p.get("note") else ""
 

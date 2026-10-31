@@ -228,42 +228,56 @@ main { min-width: 0; padding-bottom: 4rem; }
 .sec-lede { color: var(--ink-2); max-width: var(--measure); margin-bottom: 1.7rem; }
 
 /* ── Research themes ────────────────────────────────────────── */
-.themes { counter-reset: th; display: grid; gap: 1.5rem; }
-@media (min-width: 760px) { .themes { grid-template-columns: 1fr 1fr; gap: 1.6rem 2.6rem; } }
-.themes > li { counter-increment: th; padding-top: .85rem; border-top: 1px solid var(--rule); }
-.themes > li::before {
-  content: counter(th, decimal-leading-zero);
-  font-family: var(--mono); font-size: .7rem; color: var(--ink-3);
-  display: block; margin-bottom: .4rem; letter-spacing: .06em;
+/* ── Research arc ───────────────────────────────────────────── */
+.arc { display: flex; flex-direction: column; }
+.arc > li {
+  display: grid; grid-template-columns: 124px minmax(0, 1fr); gap: 0 1.1rem;
+  padding: 1.55rem 0; border-bottom: 1px solid var(--rule);
 }
-.themes h3 {
-  font-family: var(--serif); font-size: 1.14rem; font-weight: 600;
-  line-height: 1.25; margin-bottom: .45rem; letter-spacing: -.012em;
+.arc > li:first-child { padding-top: .4rem; }
+.arc > li:last-child { border-bottom: none; }
+.arc-when { font-family: var(--mono); font-size: .775rem; color: var(--ink-3); padding-top: .12rem; }
+.arc-stage {
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: .35rem;
 }
-.themes p { font-size: .925rem; color: var(--ink-2); margin-bottom: .5rem; }
-.theme-k {
-  font-family: var(--mono); font-size: .715rem !important;
-  color: var(--ink-3) !important; line-height: 1.6; margin-bottom: 0 !important;
+.arc-body h3 {
+  font-family: var(--serif); font-size: 1.24rem; font-weight: 600;
+  letter-spacing: -.014em; line-height: 1.25; margin-bottom: .22rem;
 }
+.arc-where { font-size: .875rem; color: var(--ink-3); margin-bottom: .65rem; }
+.arc-body p { font-size: .925rem; color: var(--ink-2); max-width: 66ch; }
+.arc-body p + p { margin-top: .6rem; }
+.arc-links { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; margin-top: .8rem; }
+.arc-links a { font-family: var(--mono); font-size: .73rem; letter-spacing: -.01em; }
 
-/* ── Publication filters ────────────────────────────────────── */
-.filters {
-  display: flex; flex-direction: column; gap: .6rem;
-  padding-bottom: 1rem; margin-bottom: .4rem; border-bottom: 1px solid var(--rule);
+.sub-h {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--ink-3); font-weight: 500;
+  margin-top: 2.3rem; padding-top: 1.1rem; border-top: 1px solid var(--rule-2);
 }
-.fgroup { display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; }
-.fgroup-l {
-  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--ink-3); min-width: 48px;
+.threads { display: grid; gap: 1.35rem; margin-top: 1.1rem; }
+.threads > li { padding-top: .95rem; border-top: 1px solid var(--rule); }
+.threads > li:first-child { border-top: none; padding-top: 0; }
+.threads h3 {
+  font-family: var(--serif); font-size: 1.05rem; font-weight: 600;
+  letter-spacing: -.01em; margin-bottom: .16rem;
 }
-.fgroup button {
-  font: inherit; font-size: .825rem; background: none; color: var(--ink-2);
-  border: 1px solid var(--rule); border-radius: 100px; padding: .22rem .72rem;
-  cursor: pointer; transition: all .18s;
+.threads p { font-size: .9rem; color: var(--ink-2); max-width: 66ch; }
+.threads .arc-where { margin-bottom: .4rem; }
+
+/* ── News ───────────────────────────────────────────────────── */
+.news { display: flex; flex-direction: column; }
+.news > li {
+  display: grid; grid-template-columns: 124px minmax(0, 1fr); gap: 0 1.1rem;
+  padding: .95rem 0; border-bottom: 1px solid var(--rule);
 }
-.fgroup button:hover:not(.is-on) { border-color: var(--accent); color: var(--accent); }
-.fgroup button.is-on { background: var(--accent); color: var(--paper); border-color: var(--accent); }
-.fcount { font-family: var(--mono); font-size: .72rem; color: var(--ink-3); }
+.news > li:last-child { border-bottom: none; }
+.news-when { font-family: var(--mono); font-size: .775rem; color: var(--ink-3); }
+.news-what { font-size: .925rem; color: var(--ink-2); max-width: 66ch; }
+.news-what a { font-family: var(--mono); font-size: .73rem; }
+
+.muted { color: var(--ink-3); }
 
 /* ── Publications ───────────────────────────────────────────── */
 .pubs { display: flex; flex-direction: column; }
@@ -294,10 +308,11 @@ main { min-width: 0; padding-bottom: 4rem; }
   border: 1px solid var(--rule); border-radius: 100px; padding: .14rem .6rem;
 }
 .tag-c { color: var(--accent); border-color: var(--accent-sf); background: var(--accent-sf); }
-.pub-link, .pub-act {
+.pub-doi, .pub-link, .pub-act {
   font: inherit; font-size: .815rem; font-weight: 500;
   background: none; border: none; padding: 0; cursor: pointer; color: var(--accent);
 }
+.pub-doi { font-family: var(--mono); font-size: .76rem; letter-spacing: -.01em; }
 .pub-act:hover { text-decoration: underline; text-underline-offset: .18em; }
 .pub-act[aria-expanded="true"] { color: var(--ink); }
 .pub-bib {
@@ -381,8 +396,8 @@ main { min-width: 0; padding-bottom: 4rem; }
   .nav.is-open { max-height: 320px; visibility: visible; padding-bottom: .6rem; }
   .nav a { padding: .55rem .2rem; font-size: .95rem; }
   .topbar-in { flex-wrap: wrap; }
-  .pub, .entries > li, .awards li { grid-template-columns: 1fr; gap: .25rem; }
-  .pub-year, .entry-when, .award-y { padding-top: 0; }
+  .pub, .entries > li, .awards li, .arc > li, .news > li { grid-template-columns: 1fr; gap: .25rem; }
+  .pub-year, .entry-when, .award-y, .arc-when { padding-top: 0; }
   .contact li { grid-template-columns: 1fr; }
   .metrics { grid-template-columns: repeat(2, 1fr); }
   .metric:nth-of-type(2) { border-right: none; }
@@ -411,6 +426,6 @@ main { min-width: 0; padding-bottom: 4rem; }
   .sec { padding: 14pt 0; break-inside: avoid; }
   .pub, .entries > li { break-inside: avoid; }
   .js .reveal { opacity: 1; transform: none; }
-  .pub-link::after { content: ' (' attr(href) ')'; font-size: 8pt; color: #555; }
+  .pub-doi::after, .pub-link::after { content: ' (' attr(href) ')'; font-size: 8pt; color: #555; }
   a { color: #000; }
 }
