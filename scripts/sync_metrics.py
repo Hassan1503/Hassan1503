@@ -71,7 +71,7 @@ def sync_profile(v: dict) -> bool:
         "| **%d** | **%d** | **%d** | **%d** |" % (
             v["citations"], v["h_index"], v["i10_index"], v["publications"]),
         "",
-        "<sub>Google Scholar, %s. Refreshed weekly by a scheduled workflow in this "
+        "<sub>Google Scholar, %s. Refreshed daily by a scheduled workflow in this "
         "repository.</sub>" % v["updated"],
     ])
     pattern = re.compile(r"(<!-- SCHOLAR:START -->).*?(<!-- SCHOLAR:END -->)", re.S)

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Carry per-paper "Cited by" counts from scholar.json into publications.json.
 
-assets/data/scholar.json is refreshed weekly from the public Google Scholar
+assets/data/scholar.json is refreshed daily from the public Google Scholar
 profile, but it holds Scholar's own titles and venues. assets/data/publications.json
 is the curated record the site and the profile README are both generated from.
-Without this step the four headline metrics moved every week while every
+Without this step the four headline metrics moved every day while every
 per-paper count stayed frozen at whatever was committed, so README.md
 contradicted itself: a table reading 188 citations sitting above a list whose
 individual counts no longer summed to anything like it.

@@ -27,7 +27,7 @@ the University of Bristol on a Think Big Postgraduate Scholarship.
 |:---------:|:-------:|:---------:|:------------:|
 | **188** | **7** | **6** | **16** |
 
-<sub>Google Scholar, 2026-10-31. Refreshed weekly by a scheduled workflow in this repository.</sub>
+<sub>Google Scholar, 2026-10-31. Refreshed daily by a scheduled workflow in this repository.</sub>
 <!-- SCHOLAR:END -->
 
 ## Research
