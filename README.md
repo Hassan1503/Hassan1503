@@ -1,8 +1,3 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/img/pcg-banner-dark.svg">
-  <img src="assets/img/pcg-banner-light.svg" alt="A phonocardiogram: normal cardiac cycles, each with a first and second heart sound, followed by cycles in which a systolic murmur fills the silence between them.">
-</picture>
-
 # Md Hassanuzzaman
 
 **PhD Candidate · Electrical &amp; Computer Engineering · Duke University**  
