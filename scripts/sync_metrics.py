@@ -6,7 +6,8 @@ numbers also sit in the markup so that a visitor without JavaScript — and the
 GitHub profile, which runs none — still sees current figures:
 
   index.html   the four [data-metric] cards
-  README.md    the table inside the SCHOLAR markers
+  README.md    the table inside the SCHOLAR markers, if the profile still carries
+               them — the metrics block is optional there and may be removed
 
 Run by .github/workflows/update-scholar.yml straight after the fetch, so a
 successful refresh lands everywhere in one commit.
@@ -76,7 +77,9 @@ def sync_profile(v: dict) -> bool:
     ])
     pattern = re.compile(r"(<!-- SCHOLAR:START -->).*?(<!-- SCHOLAR:END -->)", re.S)
     if not pattern.search(text):
-        sys.exit("SCHOLAR markers not found in README.md")
+        # The profile is free not to show citation metrics. Their absence is a
+        # choice, not a breakage, and must not fail the daily refresh.
+        return None
     text = pattern.sub(lambda m: "%s\n%s\n%s" % (m.group(1), table, m.group(2)), text, count=1)
     if text == before:
         return False
@@ -86,8 +89,11 @@ def sync_profile(v: dict) -> bool:
 
 def main() -> int:
     v = read_metrics()
+    page, profile = sync_page(v), sync_profile(v)
     touched = [name for name, changed in
-               (("index.html", sync_page(v)), ("README.md", sync_profile(v))) if changed]
+               (("index.html", page), ("README.md", profile)) if changed]
+    if profile is None:
+        print("README.md carries no SCHOLAR block; leaving the profile alone")
     print("%d citations, h=%d, i10=%d, %d publications (%s) — %s" % (
         v["citations"], v["h_index"], v["i10_index"], v["publications"], v["updated"],
         "updated " + ", ".join(touched) if touched else "already current"))
