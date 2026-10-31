@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Render the phonocardiogram banner used at the top of the profile README.
 
-Writes a light and a dark SVG from the same signal model that drives Figure 1
-on the website (assets/js/figure.js), so the README and the site show the same
-waveform. The figure reads left to right: five normal cardiac cycles, then a
-systolic murmur emerging as a septal defect fills the silence between S1 and S2.
+Writes a light and a dark SVG of a synthesised heart-sound signal, one per
+colour scheme, which the README selects between with prefers-color-scheme.
+The trace reads left to right: normal cardiac cycles carrying only S1 and S2,
+then cycles in which a systolic murmur fills the silence between them, as a
+septal defect would. MURMUR_FROM sets where that change happens, so the number
+of cycles on each side follows from it rather than being fixed.
 
 Usage: python3 scripts/build_banner.py
 """

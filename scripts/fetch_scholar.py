@@ -3,9 +3,13 @@
 Google Scholar profile and write them to assets/data/scholar.json.
 
 Runs on a GitHub Actions runner (see .github/workflows/update-scholar.yml).
-Uses only the standard library so it needs no installs. If Scholar serves a
-block/CAPTCHA page or the markup can't be parsed, exits non-zero WITHOUT
-touching the JSON, so the site keeps showing the last good numbers.
+Uses only the standard library so it needs no installs. In every failure case
+the JSON is left untouched, so the site keeps showing the last good numbers.
+The exit code distinguishes two of them, which matters now that this runs
+daily: a block or CAPTCHA warns and exits 0, because Scholar refuses roughly
+half the requests from datacenter IPs and a red run every other day would mean
+nothing; a page that parses to nothing exits 4, because that means the markup
+changed and someone has to look.
 """
 import html
 import json
