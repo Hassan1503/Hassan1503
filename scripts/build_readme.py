@@ -76,8 +76,11 @@ def cite_venue(venue: str) -> str:
 
 def entry(p: dict, n: int) -> str:
     parts = ["%s, %d" % (cite_venue(p["venueFull"] or p["scholarVenue"]), p["year"])]
-    if p.get("url"):
-        parts.append("[paper](%s)" % p["url"])
+    if p.get("doi"):
+        parts.append("[doi:%s](https://doi.org/%s)" % (p["doi"], p["doi"]))
+    url = p.get("url") or ""
+    if url and not url.startswith("https://doi.org/"):
+        parts.append("[paper](%s)" % url)
     cited = p.get("cited_by") or 0
     if cited:
         parts.append("%d citation%s" % (cited, "" if cited == 1 else "s"))
