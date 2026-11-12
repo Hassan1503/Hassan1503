@@ -66,7 +66,7 @@ Work I led, work with ten or more citations, and work from this year, where the 
    *Computing in Cardiology (CinC)*, vol. 50, pp. 1–4, 2023 · [doi:10.22489/CinC.2023.146](https://doi.org/10.22489/CinC.2023.146) · 3 citations
 9. **Blood Glucose Level Regression for Smartphone PPG Signals Using Machine Learning**  
    Tanvir Tazul Islam, Md. Sibbir Ahmed, **Md Hassanuzzaman**, Syed Athar Bin Amir, Tanzilur Rahman  
-   *Applied Sciences*, vol. 11, no. 2, 618, 2021 · [doi:10.3390/app11020618](https://doi.org/10.3390/app11020618) · 91 citations
+   *Applied Sciences*, vol. 11, no. 2, 618, 2021 · [doi:10.3390/app11020618](https://doi.org/10.3390/app11020618) · 92 citations
 10. **An Efficient Surface Map Creation and Tracking Using Smartphone Sensors and Crowdsourcing**  
     Md. Rabiul Ali Sarker, **Md Hassanuzzaman**, Purnendu Biswas, Saikot Hossain Dadon, Tasmina Imam, Tanzilur Rahman  
     *Sensors*, vol. 21, no. 21, 6969, 2021 · [doi:10.3390/s21216969](https://doi.org/10.3390/s21216969) · 11 citations
