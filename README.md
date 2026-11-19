@@ -63,7 +63,7 @@ Work I led, work with ten or more citations, and work from this year, where the 
    *45th Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)*, 2023 · [doi:10.1109/EMBC40787.2023.10340370](https://doi.org/10.1109/EMBC40787.2023.10340370) · 19 citations
 8. **A Deep Learning Model for Recognizing Pediatric Congenital Heart Diseases Using Phonocardiogram Signals**  
    **Md Hassanuzzaman**, Nurul Akhtar Hasan, Mohammad Abdullah Al Mamun, Khawza Iftekhar Uddin Ahmed, Ahsan Habib Khandoker, Raqibul Mostafa  
-   *Computing in Cardiology (CinC)*, vol. 50, pp. 1–4, 2023 · [doi:10.22489/CinC.2023.146](https://doi.org/10.22489/CinC.2023.146) · 3 citations
+   *Computing in Cardiology (CinC)*, vol. 50, pp. 1–4, 2023 · [doi:10.22489/CinC.2023.146](https://doi.org/10.22489/CinC.2023.146) · 4 citations
 9. **Blood Glucose Level Regression for Smartphone PPG Signals Using Machine Learning**  
    Tanvir Tazul Islam, Md. Sibbir Ahmed, **Md Hassanuzzaman**, Syed Athar Bin Amir, Tanzilur Rahman  
    *Applied Sciences*, vol. 11, no. 2, 618, 2021 · [doi:10.3390/app11020618](https://doi.org/10.3390/app11020618) · 92 citations

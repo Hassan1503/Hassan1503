@@ -1,11 +1,11 @@
 {
   "source": "Google Scholar",
   "profile_url": "https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en",
-  "updated": "2026-11-16",
+  "updated": "2026-11-19",
   "metrics": {
     "citations": {
-      "all": 191,
-      "since": 189
+      "all": 192,
+      "since": 190
     },
     "h_index": {
       "all": 7,
@@ -93,7 +93,7 @@
       "authors": "M Hassanuzzaman, NA Hasan, MA Al Mamun, KI Ahmed, AH Khandoker, ...",
       "venue": "2023 Computing in Cardiology (CinC) 50, 1-4, 2023",
       "year": 2023,
-      "cited_by": 3
+      "cited_by": 4
     },
     {
       "title": "Recognition of pediatric congenital heart diseases by using phonocardiogram signals and transformer-based neural networks",
