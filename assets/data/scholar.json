@@ -1,11 +1,11 @@
 {
   "source": "Google Scholar",
   "profile_url": "https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en",
-  "updated": "2026-11-20",
+  "updated": "2026-11-22",
   "metrics": {
     "citations": {
-      "all": 192,
-      "since": 190
+      "all": 194,
+      "since": 192
     },
     "h_index": {
       "all": 7,
@@ -33,9 +33,9 @@
       "cited_by": 0
     },
     {
-      "title": "CardioFM: A multimodal foundation model for joint ECG and PPG representation learning",
-      "authors": "M Hassanuzzaman, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal, ...",
-      "venue": "Research Square, rs. 3. rs-9652631, 2026",
+      "title": "CardioFM: A Multimodal Foundation Model for Joint ECG and PPG Representation Learning",
+      "authors": "M Hassanuzzaman, T Choudhary, A Gent, M Podgoreanu, S Agarwal, ...",
+      "venue": "",
       "year": 2026,
       "cited_by": 3
     },
@@ -44,7 +44,7 @@
       "authors": "Y Yang, M Arora, R Zhang, B Abed, J Kim, T Choudhary, ...",
       "venue": "arXiv preprint arXiv:2605.10840, 2026",
       "year": 2026,
-      "cited_by": 3
+      "cited_by": 4
     },
     {
       "title": "MPT: A Comprehensive Toolbox for Deriving Cardiorespiratory Physiomarkers from Biosignals with LLM-Based Interpretation",
@@ -100,7 +100,7 @@
       "authors": "M Hassanuzzaman, NA Hasan, MA Al Mamun, M Alkhodari, KI Ahmed, ...",
       "venue": "2023 45th Annual International Conference of the IEEE Engineering in …, 2023",
       "year": 2023,
-      "cited_by": 19
+      "cited_by": 20
     },
     {
       "title": "An efficient surface map creation and tracking using smartphone sensors and crowdsourcing",

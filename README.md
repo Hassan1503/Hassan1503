@@ -42,7 +42,7 @@ Work I led, work with ten or more citations, and work from this year, where the 
 
 1. **Clin-JEPA: A Multi-Phase Co-Training Framework for Joint-Embedding Predictive Pretraining on EHR Patient Trajectories**  
    Y Yang, M Arora, R Zhang, B Abed, J Kim, T Choudhary et al.  
-   *arXiv:2605.10840*, 2026 · [paper](https://arxiv.org/abs/2605.10840) · 3 citations
+   *arXiv:2605.10840*, 2026 · [paper](https://arxiv.org/abs/2605.10840) · 4 citations
 2. **CardioFM: A Multimodal Foundation Model for Joint ECG and PPG Representation Learning**  
    **Md Hassanuzzaman**, Tilendra Choudhary, Alasdair Gent, Mihai V. Podgoreanu, Suresh Agarwal, Vijay Krishnamoorthy, Sivasubramanium V. Bhavani, Philip Yang, Annette M. Esper, Rishikesan Kamaleswaran  
    *Research Square (preprint rs-9652631)*, 2026 · [doi:10.21203/rs.3.rs-9652631/v1](https://doi.org/10.21203/rs.3.rs-9652631/v1) · 3 citations
@@ -60,7 +60,7 @@ Work I led, work with ten or more citations, and work from this year, where the 
    *arXiv:2410.06385*, 2024 · [doi:10.48550/arXiv.2410.06385](https://doi.org/10.48550/arXiv.2410.06385) · [paper](https://arxiv.org/abs/2410.06385) · 13 citations
 7. **Recognition of Pediatric Congenital Heart Diseases by Using Phonocardiogram Signals and Transformer-Based Neural Networks**  
    **Md Hassanuzzaman**, Nurul Akhtar Hasan, Mohammad Abdullah Al Mamun, Mohanad Alkhodari, Khawza Iftekhar Uddin Ahmed, Ahsan Habib Khandoker, Raqibul Mostafa  
-   *45th Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)*, 2023 · [doi:10.1109/EMBC40787.2023.10340370](https://doi.org/10.1109/EMBC40787.2023.10340370) · 19 citations
+   *45th Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)*, 2023 · [doi:10.1109/EMBC40787.2023.10340370](https://doi.org/10.1109/EMBC40787.2023.10340370) · 20 citations
 8. **A Deep Learning Model for Recognizing Pediatric Congenital Heart Diseases Using Phonocardiogram Signals**  
    **Md Hassanuzzaman**, Nurul Akhtar Hasan, Mohammad Abdullah Al Mamun, Khawza Iftekhar Uddin Ahmed, Ahsan Habib Khandoker, Raqibul Mostafa  
    *Computing in Cardiology (CinC)*, vol. 50, pp. 1–4, 2023 · [doi:10.22489/CinC.2023.146](https://doi.org/10.22489/CinC.2023.146) · 4 citations
