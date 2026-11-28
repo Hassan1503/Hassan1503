@@ -51,7 +51,7 @@ Work I led, work with ten or more citations, and work from this year, where the 
    *IEEE Journal of Biomedical and Health Informatics*, 2026
 4. **Classification of Short-Segment Pediatric Heart Sounds Based on a Transformer-Based Convolutional Neural Network**  
    **Md Hassanuzzaman**, Samit Kumar Ghosh, Mohammad Nurul Akhtar Hasan, Mohammad Abdullah Al Mamun, Khawza Iftekhar Uddin Ahmed, Raqibul Mostafa, Ahsan Habib Khandoker  
-   *IEEE Access*, vol. 13, pp. 93852–93868, 2025 · [doi:10.1109/ACCESS.2025.3573870](https://doi.org/10.1109/ACCESS.2025.3573870) · 23 citations
+   *IEEE Access*, vol. 13, pp. 93852–93868, 2025 · [doi:10.1109/ACCESS.2025.3573870](https://doi.org/10.1109/ACCESS.2025.3573870) · 25 citations
 5. **Automated detection of pediatric congenital heart disease from phonocardiograms using deep and handcrafted feature fusion**  
    Abdul Jabbar, Ethan Grooby, Yang Yi Poh, Khawza I. Ahmad, **Md Hassanuzzaman**, Raqibul Mostafa, Ahsan Habib Khandoker, Faezeh Marzbanrad  
    *Computers in Biology and Medicine*, vol. 197, 110993, 2025 · [doi:10.1016/j.compbiomed.2025.110993](https://doi.org/10.1016/j.compbiomed.2025.110993) · [paper](https://dukespace.lib.duke.edu/server/api/core/bitstreams/d5afd6a1-4f6f-4ca8-ae68-c888842b0faf/content) · 15 citations

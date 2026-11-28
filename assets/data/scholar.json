@@ -1,11 +1,11 @@
 {
   "source": "Google Scholar",
   "profile_url": "https://scholar.google.com/citations?user=q1ppZrsAAAAJ&hl=en",
-  "updated": "2026-11-22",
+  "updated": "2026-11-28",
   "metrics": {
     "citations": {
-      "all": 194,
-      "since": 192
+      "all": 196,
+      "since": 194
     },
     "h_index": {
       "all": 7,
@@ -33,9 +33,9 @@
       "cited_by": 0
     },
     {
-      "title": "CardioFM: A Multimodal Foundation Model for Joint ECG and PPG Representation Learning",
-      "authors": "M Hassanuzzaman, T Choudhary, A Gent, M Podgoreanu, S Agarwal, ...",
-      "venue": "",
+      "title": "CardioFM: A multimodal foundation model for joint ECG and PPG representation learning",
+      "authors": "M Hassanuzzaman, T Choudhary, A Gent, MV Podgoreanu, SM Agarwal, ...",
+      "venue": "Research Square, rs. 3. rs-9652631, 2026",
       "year": 2026,
       "cited_by": 3
     },
@@ -72,7 +72,7 @@
       "authors": "M Hassanuzzaman, SK Ghosh, MNA Hasan, MA Al Mamun, KI Ahmed, ...",
       "venue": "IEEE Access 13, 93852-93868, 2025",
       "year": 2025,
-      "cited_by": 23
+      "cited_by": 25
     },
     {
       "title": "Congenital Heart Disease Classification Using Phonocardiograms: A Scalable Screening Tool for Diverse Environments",
